@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>California Road Trip 2026 | Planner</title>
+    
+    <!-- External CSS & Libraries -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="p-0 m-0">
+
+    <!-- Navigation Header -->
+    <nav class="bg-white/90 backdrop-blur-md border-b border-stone-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl font-bold text-stone-800 brand-font">CA-Trip 2026</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-stone-500">
+                    <a href="#itinerary" class="hover:text-stone-900 transition">Interactive Itinerary</a>
+                    <a href="#wedding" class="hover:text-stone-900 transition text-amber-700 font-bold">Wedding Schedule</a>
+                    <a href="#logistics" class="hover:text-stone-900 transition">Hike & Drive Data</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Header -->
+        <header class="mb-16 text-center lg:text-left">
+            <div class="inline-block px-3 py-1 bg-stone-200 text-stone-600 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
+                Expedition Hub • Mission Control
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold text-stone-900 mb-6">California Road Trip Planner</h1>
+            <p class="text-xl text-stone-600 max-w-3xl leading-relaxed">
+                Your interactive command center for the 2026 California journey. This dashboard synthesizes the wedding celebration in Tahoe with a high-alpine trekking tour through Yosemite and Sequoia, finishing with the iconic Pacific Coast Highway drive.
+            </p>
+        </header>
+
+        <!-- Itinerary Section -->
+        <section id="itinerary" class="mb-20">
+            <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm mb-12">
+                <h2 class="text-3xl font-bold mb-3">Interactive Journey Flow</h2>
+                <p class="text-stone-500">Select a day from the journey track on the left to explore the vertical sequence of events. Each day contains specific transit times, map previews, and multiple hiking options with verified Komoot navigation links.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Sidebar Timeline -->
+                <div class="lg:col-span-3 bg-white rounded-3xl shadow-sm border border-stone-100 overflow-hidden sticky top-24 z-20">
+                    <div class="p-6 border-b border-stone-100 bg-stone-50/50">
+                        <h2 class="text-xl font-bold">The Timeline</h2>
+                        <p class="text-[10px] text-stone-500 uppercase font-bold tracking-wider mt-1">Aug 19 – Aug 31, 2026</p>
+                    </div>
+                    <div class="h-[600px] overflow-y-auto custom-scrollbar" id="timeline-list"></div>
+                </div>
+
+                <!-- Sequence & Detail view -->
+                <div class="lg:col-span-9 space-y-10">
+                    <div id="day-header" class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm flex flex-col md:flex-row justify-between items-center gap-4"></div>
+                    <div id="sequence-container" class="flex flex-col gap-10"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wedding Schedule Section -->
+        <section id="wedding" class="mb-20 scroll-mt-24">
+            <div class="bg-[#fdf9f4] rounded-[3rem] p-10 md:p-16 border border-amber-100">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4">Olga & Pavel's Wedding</h2>
+                    <p class="text-stone-600 max-w-2xl mx-auto text-lg">Three days of celebration on the shores of Lake Tahoe. This official schedule ensures you're in the right place for every toast and sunset cruise.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                        <div class="text-stone-400 text-[11px] font-bold uppercase mb-4 tracking-widest">Thu Aug 20</div>
+                        <h4 class="font-bold text-xl mb-2">Paradise Cruise</h4>
+                        <p class="text-sm text-stone-600 leading-relaxed">5:30 PM. Lake Tahoe Paradise Boat. Drinks & appetizers on the water to kick off the festivities.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border-2 border-amber-200 shadow-xl transform md:scale-105 z-10">
+                        <div class="text-amber-600 text-[11px] font-bold uppercase mb-4 tracking-widest">Fri Aug 21</div>
+                        <h4 class="font-bold text-xl mb-2">The Main Event</h4>
+                        <p class="text-sm text-stone-600 leading-relaxed">3:30 PM. The Landing Tahoe. Ceremony followed by cocktails and a celebratory dinner by the lake.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
+                        <div class="text-stone-400 text-[11px] font-bold uppercase mb-4 tracking-widest">Sat Aug 22</div>
+                        <h4 class="font-bold text-xl mb-2">Farewell Brunch</h4>
+                        <p class="text-sm text-stone-600 leading-relaxed">11:00 AM. Toulouse Restaurant. A final gathering for the group before we head south toward Yosemite.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logistics Section -->
+        <section id="logistics" class="mb-20 scroll-mt-24">
+            <div class="bg-white p-10 rounded-3xl border border-stone-100 shadow-sm mb-10">
+                <h2 class="text-3xl font-bold mb-4">Logistics & Analytics</h2>
+                <p class="text-lg text-stone-600">Track your pre-trip mission tasks and visualize the driving load. Note that the Big Sur coastal leg (Day 11) is the longest driving segment of the trip.</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                <div class="bg-white rounded-3xl p-10 border border-stone-200 shadow-sm h-full">
+                    <h3 class="text-2xl font-bold mb-8">Planning Checklist</h3>
+                    <div id="todo-container" class="space-y-4"></div>
+                </div>
+                <div class="bg-white rounded-3xl p-10 border border-stone-200 shadow-sm h-full">
+                    <h3 class="text-2xl font-bold mb-2">Driving Intensity</h3>
+                    <p class="text-xs text-stone-400 mb-8 uppercase font-bold tracking-widest">Total Daily Kilometers</p>
+                    <div class="chart-container">
+                        <canvas id="drivingChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-stone-500 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-xs uppercase tracking-widest">&copy; 2026 California Trip Command • MUC-RNO-SFO • Developed for Olga & Pavel's Wedding Flow</p>
+        </div>
+    </footer>
+
+    <!-- Main Controller Module -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
