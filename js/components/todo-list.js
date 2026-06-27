@@ -1,10 +1,14 @@
 /**
  * Initializes and manages the planning checklist.
  * @param {Array} todos - The checklist items array.
+ * @param {string} lang - The active language code.
+ * @returns {Object} Interface to update language dynamically.
  */
-export function initTodoList(todos) {
+export function initTodoList(todos, lang = 'en') {
     const container = document.getElementById('todo-container');
     if (!container) return;
+
+    let currentLang = lang;
 
     function render() {
         container.innerHTML = todos.map(todo => `
@@ -12,7 +16,7 @@ export function initTodoList(todos) {
                 <div class="w-6 h-6 border-2 rounded-lg flex items-center justify-center transition ${todo.done ? 'bg-stone-800 border-stone-800' : 'border-stone-300 bg-white'}">
                     ${todo.done ? '<span class="text-white text-[10px]">✔</span>' : ''}
                 </div>
-                <span class="text-sm flex-1 ${todo.done ? 'line-through text-stone-400' : 'text-stone-700 font-bold'}">${todo.text}</span>
+                <span class="text-sm flex-1 ${todo.done ? 'line-through text-stone-400' : 'text-stone-700 font-bold'}">${todo.text[currentLang] || todo.text}</span>
             </div>
         `).join('');
     }
@@ -30,4 +34,11 @@ export function initTodoList(todos) {
     });
 
     render();
+
+    return {
+        updateLanguage(newLang) {
+            currentLang = newLang;
+            render();
+        }
+    };
 }

@@ -1,3 +1,5 @@
+let chartInstance = null;
+
 /**
  * Initializes the driving intensity chart using Chart.js.
  * @param {Array} tripData - The trip details array.
@@ -12,7 +14,12 @@ export function initDrivingChart(tripData) {
         d.sequence.forEach(s => { if (s.dist) sum += s.dist; });
         return sum;
     });
-    const labels = tripData.map(d => d.date.split(',')[1].trim());
+    
+    // Extract date labels. In EN: "Wed, Aug 19" -> "Aug 19". In RU: "Ср, 19 авг" -> "19 авг".
+    const labels = tripData.map(d => {
+        const parts = d.date.split(',');
+        return parts.length > 1 ? parts[1].trim() : d.date;
+    });
 
     // Ensure Chart.js library is loaded
     if (typeof Chart === 'undefined') {
@@ -20,7 +27,11 @@ export function initDrivingChart(tripData) {
         return;
     }
 
-    return new Chart(ctx, {
+    if (chartInstance) {
+        chartInstance.destroy();
+    }
+
+    chartInstance = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: labels,
@@ -47,4 +58,6 @@ export function initDrivingChart(tripData) {
             }
         }
     });
+
+    return chartInstance;
 }

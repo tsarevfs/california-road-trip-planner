@@ -14,13 +14,16 @@ export function initTimeline(tripData, onDaySelect) {
         </div>
     `).join('');
 
-    list.addEventListener('click', (e) => {
-        const item = e.target.closest('.timeline-item');
-        if (item) {
-            const dayId = parseInt(item.dataset.day, 10);
-            onDaySelect(dayId);
-        }
-    });
+    if (!list.dataset.listenerAdded) {
+        list.addEventListener('click', (e) => {
+            const item = e.target.closest('.timeline-item');
+            if (item) {
+                const dayId = parseInt(item.dataset.day, 10);
+                onDaySelect(dayId);
+            }
+        });
+        list.dataset.listenerAdded = 'true';
+    }
 }
 
 /**

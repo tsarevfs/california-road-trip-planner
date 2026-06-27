@@ -19,10 +19,17 @@
                 <div class="flex items-center gap-2">
                     <span class="text-2xl font-bold text-stone-800 brand-font">CA-Trip 2026</span>
                 </div>
-                <div class="hidden md:flex space-x-8 text-sm font-medium text-stone-500">
-                    <a href="#itinerary" class="hover:text-stone-900 transition">Interactive Itinerary</a>
-                    <a href="#wedding" class="hover:text-stone-900 transition text-amber-700 font-bold">Wedding Schedule</a>
-                    <a href="#logistics" class="hover:text-stone-900 transition">Hike & Drive Data</a>
+                <div class="flex items-center gap-6">
+                    <div class="hidden md:flex space-x-8 text-sm font-medium text-stone-500">
+                        <a href="#itinerary" class="hover:text-stone-900 transition" data-i18n="nav_itinerary">Interactive Itinerary</a>
+                        <a href="#wedding" class="hover:text-stone-900 transition text-amber-700 font-bold" data-i18n="nav_wedding">Wedding Schedule</a>
+                        <a href="#logistics" class="hover:text-stone-900 transition" data-i18n="nav_logistics">Hike & Drive Data</a>
+                    </div>
+                    <!-- Language Switcher -->
+                    <div class="flex items-center bg-stone-100 p-1 rounded-xl border border-stone-200 text-xs font-semibold select-none">
+                        <button id="lang-en" class="px-2.5 py-1 rounded-lg border transition-all duration-200 focus:outline-none">EN</button>
+                        <button id="lang-ru" class="px-2.5 py-1 rounded-lg border transition-all duration-200 focus:outline-none">RU</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -33,11 +40,11 @@
         
         <!-- Header -->
         <header class="mb-16 text-center lg:text-left">
-            <div class="inline-block px-3 py-1 bg-stone-200 text-stone-600 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4">
+            <div class="inline-block px-3 py-1 bg-stone-200 text-stone-600 rounded-full text-[10px] font-bold uppercase tracking-widest mb-4" data-i18n="header_badge">
                 Expedition Hub • Mission Control
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold text-stone-900 mb-6">California Road Trip Planner</h1>
-            <p class="text-xl text-stone-600 max-w-3xl leading-relaxed">
+            <h1 class="text-5xl md:text-7xl font-bold text-stone-900 mb-6" data-i18n="header_title">California Road Trip Planner</h1>
+            <p class="text-xl text-stone-600 max-w-3xl leading-relaxed" data-i18n="header_desc">
                 Your interactive command center for the 2026 California journey. This dashboard synthesizes the wedding celebration in Tahoe with a high-alpine trekking tour through Yosemite and Sequoia, finishing with the iconic Pacific Coast Highway drive.
             </p>
         </header>
@@ -45,16 +52,16 @@
         <!-- Itinerary Section -->
         <section id="itinerary" class="mb-20">
             <div class="bg-white p-8 rounded-3xl border border-stone-100 shadow-sm mb-12">
-                <h2 class="text-3xl font-bold mb-3">Interactive Journey Flow</h2>
-                <p class="text-stone-500">Select a day from the journey track on the left to explore the vertical sequence of events. Each day contains specific transit times, map previews, and multiple hiking options with verified Komoot navigation links.</p>
+                <h2 class="text-3xl font-bold mb-3" data-i18n="itinerary_title">Interactive Journey Flow</h2>
+                <p class="text-stone-500" data-i18n="itinerary_desc">Select a day from the journey track on the left to explore the vertical sequence of events. Each day contains specific transit times, map previews, and multiple hiking options with verified Komoot navigation links.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                 
                 <!-- Sidebar Timeline -->
                 <div class="lg:col-span-3 bg-white/90 backdrop-blur-md rounded-2xl lg:rounded-3xl shadow-sm border border-stone-100 overflow-hidden sticky top-16 lg:top-24 z-20">
                     <div class="p-6 border-b border-stone-100 bg-stone-50/50 hidden lg:block">
-                        <h2 class="text-xl font-bold">The Timeline</h2>
-                        <p class="text-[10px] text-stone-500 uppercase font-bold tracking-wider mt-1">Aug 19 – Aug 31, 2026</p>
+                        <h2 class="text-xl font-bold" data-i18n="timeline_title">The Timeline</h2>
+                        <p class="text-[10px] text-stone-500 uppercase font-bold tracking-wider mt-1" data-i18n="timeline_date_range">Aug 19 – Aug 31, 2026</p>
                     </div>
                     <div class="flex lg:flex-col overflow-x-auto lg:overflow-y-auto h-auto lg:h-[600px] custom-scrollbar" id="timeline-list"></div>
                 </div>
@@ -71,24 +78,24 @@
         <section id="wedding" class="mb-20 scroll-mt-24">
             <div class="bg-[#fdf9f4] rounded-[3rem] p-10 md:p-16 border border-amber-100">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4">Olga & Pavel's Wedding</h2>
-                    <p class="text-stone-600 max-w-2xl mx-auto text-lg">Three days of celebration on the shores of Lake Tahoe. This official schedule ensures you're in the right place for every toast and sunset cruise.</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4" data-i18n="wedding_title">Olga & Pavel's Wedding</h2>
+                    <p class="text-stone-600 max-w-2xl mx-auto text-lg" data-i18n="wedding_desc">Three days of celebration on the shores of Lake Tahoe. This official schedule ensures you're in the right place for every toast and sunset cruise.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
-                        <div class="text-stone-400 text-[11px] font-bold uppercase mb-4 tracking-widest">Thu Aug 20</div>
-                        <h4 class="font-bold text-xl mb-2">Paradise Cruise</h4>
-                        <p class="text-sm text-stone-600 leading-relaxed">5:30 PM. Lake Tahoe Paradise Boat. Drinks & appetizers on the water to kick off the festivities.</p>
+                        <div class="text-stone-400 text-[11px] font-bold uppercase mb-4 tracking-widest" data-i18n="wedding_day1_date">Thu Aug 20</div>
+                        <h4 class="font-bold text-xl mb-2" data-i18n="wedding_day1_title">Paradise Cruise</h4>
+                        <p class="text-sm text-stone-600 leading-relaxed" data-i18n="wedding_day1_desc">5:30 PM. Lake Tahoe Paradise Boat. Drinks & appetizers on the water to kick off the festivities.</p>
                     </div>
                     <div class="bg-white p-8 rounded-2xl border-2 border-amber-200 shadow-xl transform md:scale-105 z-10">
-                        <div class="text-amber-600 text-[11px] font-bold uppercase mb-4 tracking-widest">Fri Aug 21</div>
-                        <h4 class="font-bold text-xl mb-2">The Main Event</h4>
-                        <p class="text-sm text-stone-600 leading-relaxed">3:30 PM. The Landing Tahoe. Ceremony followed by cocktails and a celebratory dinner by the lake.</p>
+                        <div class="text-amber-600 text-[11px] font-bold uppercase mb-4 tracking-widest" data-i18n="wedding_day2_date">Fri Aug 21</div>
+                        <h4 class="font-bold text-xl mb-2" data-i18n="wedding_day2_title">The Main Event</h4>
+                        <p class="text-sm text-stone-600 leading-relaxed" data-i18n="wedding_day2_desc">3:30 PM. The Landing Tahoe. Ceremony followed by cocktails and a celebratory dinner by the lake.</p>
                     </div>
                     <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
-                        <div class="text-stone-400 text-[11px] font-bold uppercase mb-4 tracking-widest">Sat Aug 22</div>
-                        <h4 class="font-bold text-xl mb-2">Farewell Brunch</h4>
-                        <p class="text-sm text-stone-600 leading-relaxed">11:00 AM. Toulouse Restaurant. A final gathering for the group before we head south toward Yosemite.</p>
+                        <div class="text-stone-400 text-[11px] font-bold uppercase mb-4 tracking-widest" data-i18n="wedding_day3_date">Sat Aug 22</div>
+                        <h4 class="font-bold text-xl mb-2" data-i18n="wedding_day3_title">Farewell Brunch</h4>
+                        <p class="text-sm text-stone-600 leading-relaxed" data-i18n="wedding_day3_desc">11:00 AM. Toulouse Restaurant. A final gathering for the group before we head south toward Yosemite.</p>
                     </div>
                 </div>
             </div>
@@ -97,17 +104,17 @@
         <!-- Logistics Section -->
         <section id="logistics" class="mb-20 scroll-mt-24">
             <div class="bg-white p-10 rounded-3xl border border-stone-100 shadow-sm mb-10">
-                <h2 class="text-3xl font-bold mb-4">Logistics & Analytics</h2>
-                <p class="text-lg text-stone-600">Track your pre-trip mission tasks and visualize the driving load. Note that the Big Sur coastal leg (Day 11) is the longest driving segment of the trip.</p>
+                <h2 class="text-3xl font-bold mb-4" data-i18n="logistics_title">Logistics & Analytics</h2>
+                <p class="text-lg text-stone-600" data-i18n="logistics_desc">Track your pre-trip mission tasks and visualize the driving load. Note that the Big Sur coastal leg (Day 11) is the longest driving segment of the trip.</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
                 <div class="bg-white rounded-3xl p-10 border border-stone-200 shadow-sm h-full">
-                    <h3 class="text-2xl font-bold mb-8">Planning Checklist</h3>
+                    <h3 class="text-2xl font-bold mb-8" data-i18n="checklist_title">Planning Checklist</h3>
                     <div id="todo-container" class="space-y-4"></div>
                 </div>
                 <div class="bg-white rounded-3xl p-10 border border-stone-200 shadow-sm h-full">
-                    <h3 class="text-2xl font-bold mb-2">Driving Intensity</h3>
-                    <p class="text-xs text-stone-400 mb-8 uppercase font-bold tracking-widest">Total Daily Kilometers</p>
+                    <h3 class="text-2xl font-bold mb-2" data-i18n="driving_intensity_title">Driving Intensity</h3>
+                    <p class="text-xs text-stone-400 mb-8 uppercase font-bold tracking-widest" data-i18n="driving_intensity_subtitle">Total Daily Kilometers</p>
                     <div class="chart-container">
                         <canvas id="drivingChart"></canvas>
                     </div>
@@ -119,7 +126,7 @@
     <!-- Footer -->
     <footer class="bg-stone-900 text-stone-500 py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-xs uppercase tracking-widest">&copy; 2026 California Trip Command • Munich - Reno - San Francisco • Developed for Olga & Pavel's Wedding Flow</p>
+            <p class="text-xs uppercase tracking-widest" data-i18n="footer_text">&copy; 2026 California Trip Command • Munich - Reno - San Francisco • Developed for Olga & Pavel's Wedding Flow</p>
         </div>
     </footer>
 
