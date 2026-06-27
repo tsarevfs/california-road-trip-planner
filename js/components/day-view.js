@@ -1,4 +1,29 @@
 /**
+ * Formats step detail text, wrapping tips or warnings (marked with ⚠️) in alert blocks.
+ * @param {string} detail - The raw detail string.
+ * @returns {string} The formatted HTML string.
+ */
+function formatDetail(detail) {
+    if (!detail) return '';
+    
+    if (detail.includes('⚠️')) {
+        const parts = detail.split('⚠️');
+        const mainText = parts[0].trim();
+        const warningText = parts.slice(1).join('⚠️').trim();
+        
+        return `
+            ${mainText ? `<p class="text-stone-600 text-sm leading-relaxed mb-3">${mainText}</p>` : ''}
+            <div class="p-4 bg-amber-50/65 border border-amber-100/80 rounded-xl text-xs text-stone-700 leading-relaxed flex items-start gap-3">
+                <span class="text-sm flex-shrink-0 leading-none">⚠️</span>
+                <div>${warningText}</div>
+            </div>
+        `;
+    }
+    
+    return `<p class="text-stone-600 text-sm leading-relaxed">${detail}</p>`;
+}
+
+/**
  * Renders the day view including header and itinerary sequence.
  * @param {Object} data - The day's data object from tripData.
  */
@@ -8,12 +33,14 @@ export function renderDayView(data) {
     // Render day header
     const headerEl = document.getElementById('day-header');
     if (headerEl) {
+        headerEl.className = "bg-white p-8 rounded-3xl border border-stone-100 shadow-sm flex flex-col md:flex-row justify-between items-start md:items-center gap-4";
         headerEl.innerHTML = `
-            <div class="text-center md:text-left">
+            <div class="flex-1 text-center md:text-left pr-4">
                 <span class="text-stone-400 font-bold uppercase text-[10px] tracking-widest mb-1 block">${data.date}</span>
-                <h3 class="text-3xl font-bold text-stone-900">${data.title}</h3>
+                <h3 class="text-3xl font-bold text-stone-900 mb-2">${data.title}</h3>
+                ${data.summary ? `<p class="text-stone-500 text-sm leading-relaxed max-w-2xl">${data.summary}</p>` : ''}
             </div>
-            <div class="bg-stone-50 px-5 py-2 rounded-xl border border-stone-100">
+            <div class="bg-stone-50 px-5 py-2 rounded-xl border border-stone-100 self-center md:self-start flex-shrink-0 mt-3 md:mt-0">
                 <span class="text-xs font-bold text-stone-500 uppercase">Day ${data.day} Journey</span>
             </div>
         `;
@@ -33,13 +60,17 @@ export function renderDayView(data) {
                 <div class="flex justify-between items-start mb-6">
                     <div class="flex-1 pr-6">
                         <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold uppercase rounded-md mb-2 inline-block">🚗 Drive Segment</span>
-                        <h4 class="font-bold text-2xl leading-tight">${step.label}</h4>
-                        <p class="text-stone-500 mt-1">${step.from} ➔ ${step.to}</p>
-                        ${step.detail ? `<p class="text-xs text-stone-600 mt-3 leading-relaxed">${step.detail}</p>` : ''}
+                        <h4 class="font-bold text-2xl text-stone-900 leading-tight">${step.label}</h4>
+                        <div class="flex items-center gap-2.5 mt-2.5 text-stone-500 text-sm flex-wrap">
+                            <span class="font-semibold text-stone-700">${step.from}</span>
+                            <svg class="w-4 h-4 text-stone-400 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7"/></svg>
+                            <span class="font-semibold text-stone-700">${step.to}</span>
+                        </div>
+                        ${step.detail ? `<div class="mt-4">${formatDetail(step.detail)}</div>` : ''}
                     </div>
-                    <div class="text-right">
+                    <div class="text-right flex-shrink-0">
                         <div class="text-2xl font-bold text-stone-800">${step.dist} km</div>
-                        <div class="px-2 py-1 bg-stone-900 text-white text-[10px] font-bold rounded-lg mt-2 inline-block">${step.time}</div>
+                        <div class="px-2.5 py-1 bg-stone-900 text-white text-[10px] font-bold rounded-lg mt-2 inline-block tracking-wider uppercase">${step.time}</div>
                     </div>
                 </div>
                 <div class="map-wrapper mb-6"><iframe src="${mapUrl}"></iframe></div>
@@ -64,8 +95,8 @@ export function renderDayView(data) {
             cardContent = `
                 <div class="mb-2">
                     <span class="px-2 py-0.5 bg-emerald-100 text-emerald-700 text-[10px] font-bold uppercase rounded-md mb-2 inline-block">⛰️ Explore Options</span>
-                    <h4 class="font-bold text-2xl mb-1">${step.label}</h4>
-                    <p class="text-stone-500 text-sm mb-8">${step.detail}</p>
+                    <h4 class="font-bold text-2xl text-stone-900 mb-1.5">${step.label}</h4>
+                    <p class="text-stone-500 text-sm mb-6">${step.detail}</p>
                     <div class="flex gap-6 overflow-x-auto pb-6 custom-scrollbar">
                         ${hikeCards}
                     </div>
@@ -77,8 +108,8 @@ export function renderDayView(data) {
                     <div class="w-14 h-14 bg-emerald-100 text-emerald-700 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">${step.icon}</div>
                     <div class="flex-1">
                         <span class="text-[10px] font-bold text-emerald-600 uppercase tracking-widest mb-1 block">Activity</span>
-                        <h4 class="font-bold text-2xl mb-2">${step.label}</h4>
-                        <p class="text-stone-600 leading-relaxed">${step.detail}</p>
+                        <h4 class="font-bold text-2xl text-stone-900 mb-2">${step.label}</h4>
+                        ${formatDetail(step.detail)}
                     </div>
                 </div>
             `;
@@ -88,8 +119,8 @@ export function renderDayView(data) {
                     <div class="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">${step.icon}</div>
                     <div class="flex-1">
                         <span class="text-[10px] font-bold text-amber-600 uppercase tracking-widest mb-1 block">Rest Point</span>
-                        <h4 class="font-bold text-2xl mb-1">${step.label}</h4>
-                        <p class="text-stone-500">${step.detail}</p>
+                        <h4 class="font-bold text-2xl text-stone-900 mb-1">${step.label}</h4>
+                        ${formatDetail(step.detail)}
                     </div>
                 </div>
             `;
@@ -100,11 +131,11 @@ export function renderDayView(data) {
                         <div class="w-14 h-14 bg-indigo-100 text-indigo-700 rounded-2xl flex items-center justify-center text-2xl flex-shrink-0">${step.icon}</div>
                         <div class="flex-1">
                             <span class="text-[10px] font-bold text-indigo-600 uppercase tracking-widest mb-1 block">Global Transit</span>
-                            <h4 class="font-bold text-2xl mb-2">${step.label}</h4>
-                            <p class="text-stone-600">${step.detail}</p>
+                            <h4 class="font-bold text-2xl text-stone-900 mb-2">${step.label}</h4>
+                            ${formatDetail(step.detail)}
                         </div>
                     </div>
-                    <div class="text-right">
+                    <div class="text-right flex-shrink-0">
                         <span class="px-3 py-1.5 bg-indigo-50 text-indigo-700 text-[11px] font-bold border border-indigo-100 rounded-lg">${step.time}</span>
                     </div>
                 </div>
