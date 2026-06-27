@@ -44,7 +44,7 @@ export const tripData = [
                         time: '1h 15m', 
                         diff: 'Easy', 
                         color: 'bg-emerald-500', 
-                        link: 'https://www.komoot.com/highlight/117387',
+                        link: 'https://www.komoot.com/highlight/202684',
                         image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: 'A beautiful, easy trail surrounding the alpine waters of Tenaya Lake, framed by dramatic granite domes. Perfect for a relaxing stroll and a quick dip in the cool waters at high elevation.'
                     },
@@ -64,7 +64,7 @@ export const tripData = [
                         time: '25m', 
                         diff: 'Easy', 
                         color: 'bg-blue-500', 
-                        link: 'https://www.komoot.com/highlight/126938',
+                        link: 'https://www.komoot.com/highlight/114952',
                         image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: 'A short, accessible path offering iconic, sweeping views of Half Dome, Yosemite Valley, and the high country. An essential stop to appreciate the massive scale of Yosemite\'s glacial geology.'
                     }
@@ -87,7 +87,7 @@ export const tripData = [
                         time: '4h 30m', 
                         diff: 'Hard', 
                         color: 'bg-red-500', 
-                        link: 'https://www.komoot.com/highlight/117385',
+                        link: 'https://www.komoot.com/highlight/202685',
                         image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: 'Yosemite\'s signature hike climbs steep stone steps alongside roaring giant waterfalls that spray hikers with cooling mist. Reaching the top of Nevada Fall offers breathtaking views of the surrounding wilderness.'
                     },
@@ -107,7 +107,7 @@ export const tripData = [
                         time: '6h 00m', 
                         diff: 'Extreme', 
                         color: 'bg-stone-800', 
-                        link: 'https://www.komoot.com/highlight/117386',
+                        link: 'https://www.komoot.com/highlight/114950',
                         image: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: 'A grueling, strenuous climb up historic switchbacks to the top of the tallest waterfall in North America. Reaching the summit rewards you with dramatic views looking straight down into the valley below.'
                     }
