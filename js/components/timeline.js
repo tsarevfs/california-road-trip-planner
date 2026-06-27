@@ -8,9 +8,9 @@ export function initTimeline(tripData, onDaySelect) {
     if (!list) return;
 
     list.innerHTML = tripData.map(item => `
-        <div class="timeline-item p-6 cursor-pointer border-l-4 border-transparent hover:bg-stone-50 transition border-b border-stone-100 group" data-day="${item.day}">
-            <div class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-2">${item.date}</div>
-            <div class="font-bold text-stone-800 text-sm group-hover:text-stone-950">${item.title}</div>
+        <div class="timeline-item p-4 lg:p-6 cursor-pointer border-b-2 lg:border-b lg:border-stone-100 lg:border-l-4 border-stone-100 lg:border-l-transparent hover:bg-stone-50 transition group flex-shrink-0 w-36 sm:w-44 lg:w-auto" data-day="${item.day}">
+            <div class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1.5">${item.date}</div>
+            <div class="font-bold text-stone-800 text-sm group-hover:text-stone-950 truncate">${item.title}</div>
         </div>
     `).join('');
 
@@ -31,6 +31,7 @@ export function setActiveTimelineItem(dayId) {
     document.querySelectorAll('.timeline-item').forEach((el) => {
         if (parseInt(el.dataset.day, 10) === dayId) {
             el.classList.add('active');
+            el.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
         } else {
             el.classList.remove('active');
         }

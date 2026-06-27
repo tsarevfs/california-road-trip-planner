@@ -51,12 +51,12 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
                 
                 <!-- Sidebar Timeline -->
-                <div class="lg:col-span-3 bg-white rounded-3xl shadow-sm border border-stone-100 overflow-hidden sticky top-24 z-20">
-                    <div class="p-6 border-b border-stone-100 bg-stone-50/50">
+                <div class="lg:col-span-3 bg-white/90 backdrop-blur-md rounded-2xl lg:rounded-3xl shadow-sm border border-stone-100 overflow-hidden sticky top-16 lg:top-24 z-20">
+                    <div class="p-6 border-b border-stone-100 bg-stone-50/50 hidden lg:block">
                         <h2 class="text-xl font-bold">The Timeline</h2>
                         <p class="text-[10px] text-stone-500 uppercase font-bold tracking-wider mt-1">Aug 19 – Aug 31, 2026</p>
                     </div>
-                    <div class="h-[600px] overflow-y-auto custom-scrollbar" id="timeline-list"></div>
+                    <div class="flex lg:flex-col overflow-x-auto lg:overflow-y-auto h-auto lg:h-[600px] custom-scrollbar" id="timeline-list"></div>
                 </div>
 
                 <!-- Sequence & Detail view -->
