@@ -162,6 +162,22 @@ export const tripData = [
         ]
     },
     { 
+        day: 8, date: "Wed, Aug 26", title: "LA: Hollywood & Griffith", 
+        sequence: [
+            { type: 'activity', label: 'Griffith Observatory', detail: 'Explore scientific exhibits, planetarium shows, and panoramic views of the Los Angeles basin and Hollywood Sign.', icon: '🔭' },
+            { type: 'activity', label: 'Hollywood Walk of Fame', detail: 'Stroll along Hollywood Boulevard and visit the historic Chinese Theatre and Sunset Strip.', icon: '⭐' },
+            { type: 'stay', label: 'Los Angeles', detail: 'Hollywood or Santa Monica basecamp.', icon: '🏨' }
+        ]
+    },
+    { 
+        day: 9, date: "Thu, Aug 27", title: "LA: Coastline & Art", 
+        sequence: [
+            { type: 'activity', label: 'The Getty Center', detail: 'Visit the world-renowned museum hosting European paintings, sculptures, and beautiful modern architecture overlooking LA.', icon: '🎨' },
+            { type: 'activity', label: 'Santa Monica & Venice Beach', detail: 'Walk along the historic Santa Monica Pier, visit the beach, and enjoy the eccentric Venice Beach boardwalk.', icon: '🎡' },
+            { type: 'stay', label: 'Los Angeles', detail: 'Hollywood or Santa Monica basecamp.', icon: '🏨' }
+        ]
+    },
+    { 
         day: 10, date: "Fri, Aug 28", title: "PCH Northbound", 
         sequence: [
             { type: 'drive', label: 'Highway 1 Coast Drive', from: 'Los Angeles', to: 'San Luis Obispo', dist: 330, time: '3h 45m', icon: '🚗' },
