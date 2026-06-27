@@ -88,34 +88,24 @@ export const tripData = [
                 detail: 'Choose an easy hike for your second day in the park.',
                 hikes: [
                     { 
-                        name: 'Tenaya Lake Loop', 
-                        dist: '4.0 km', 
-                        time: '1h 15m', 
-                        diff: 'Easy', 
-                        color: 'bg-emerald-500', 
-                        link: 'https://www.komoot.com/highlight/202684',
+                        name: 'Cathedral Lakes Trail', 
+                        dist: '15.8 km', 
+                        time: '4h 45m', 
+                        diff: 'Moderate', 
+                        color: 'bg-emerald-600', 
+                        link: 'https://www.komoot.com/smarttour/e2813460839/cathedral-lakes-trail?ref=wsd&t_s=referral&t_cid=route_share&t_ref_username=5512427181359',
                         image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'A beautiful, easy trail surrounding the alpine waters of Tenaya Lake, framed by dramatic granite domes. Perfect for a relaxing stroll and a quick dip in the cool waters at high elevation.'
+                        summary: 'A spectacular hike in Tuolumne Meadows climbing through pine forests to the stunning alpine shores of Lower and Upper Cathedral Lakes under the shadow of Cathedral Peak.'
                     },
                     { 
-                        name: 'Lower Yosemite Fall', 
-                        dist: '1.9 km', 
-                        time: '35m', 
+                        name: 'Lower Yosemite Fall Trail', 
+                        dist: '4.6 km', 
+                        time: '1h 10m', 
                         diff: 'Easy', 
                         color: 'bg-teal-500', 
-                        link: 'https://www.komoot.com/highlight/114947',
+                        link: 'https://www.komoot.com/smarttour/e2813485123/lower-yosemite-fall-trail?ref=wsd&t_s=referral&t_cid=route_share&t_ref_username=5512427181359',
                         image: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: 'An easy, paved walk leading straight to the base of the spectacular lower section of North America\'s tallest waterfall. Enjoy the misty spray and towering pine forests framing the roaring cascade.'
-                    },
-                    { 
-                        name: 'Glacier Point Loop', 
-                        dist: '1.5 km', 
-                        time: '25m', 
-                        diff: 'Easy', 
-                        color: 'bg-blue-500', 
-                        link: 'https://www.komoot.com/highlight/114952',
-                        image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'A short, accessible path offering iconic, sweeping views of Half Dome, Yosemite Valley, and the high country. An essential stop to appreciate the massive scale of Yosemite\'s glacial geology.'
                     }
                 ]
             },
