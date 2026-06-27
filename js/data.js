@@ -30,7 +30,26 @@ export const tripData = [
         summary: "Join the farewell brunch in South Lake Tahoe to share final group moments before preparing for the mountain crossing.",
         sequence: [
             { type: 'activity', label: 'Brunch at Toulouse', detail: '11:00 AM. Final group celebration.', icon: '🥞' },
-            { type: 'drive', label: 'Tioga Pass Scenic Route', from: 'South Lake Tahoe', to: 'Lee Vining', dist: 275, time: '3h 45m', icon: '🚗' },
+            { 
+                type: 'drive', 
+                label: 'Segment 1: South Lake Tahoe to Bridgeport', 
+                from: 'South Lake Tahoe', 
+                to: 'Bridgeport', 
+                dist: 180, 
+                time: '2h 15m', 
+                detail: 'Drive south from Lake Tahoe along US-395, crossing scenic mountain passes and descending into the historic ranching town of Bridgeport.',
+                icon: '🚗' 
+            },
+            { 
+                type: 'drive', 
+                label: 'Segment 2: Bridgeport to Lee Vining', 
+                from: 'Bridgeport', 
+                to: 'Lee Vining', 
+                dist: 95, 
+                time: '1h 30m', 
+                detail: 'Continue south on US-395, passing the spectacular overlooks of Mono Lake before arriving at your Yosemite Gateway basecamp.',
+                icon: '🚗' 
+            },
             { type: 'stay', label: 'Yosemite Gateway', detail: 'Lee Vining or Yosemite Area.', icon: '🏨' }
         ]
     },
@@ -109,7 +128,26 @@ export const tripData = [
                     }
                 ]
             },
-            { type: 'drive', label: 'South to Sequoia Area', from: 'Yosemite Valley', to: 'Three Rivers', dist: 300, time: '4h 15m', icon: '🚗' },
+            { 
+                type: 'drive', 
+                label: 'Segment 1: Yosemite Valley to Fresno', 
+                from: 'Yosemite Valley', 
+                to: 'Fresno', 
+                dist: 150, 
+                time: '2h 15m', 
+                detail: 'Descend from the Sierra Nevada mountains along the winding roads of CA-41 South, arriving in Fresno in the Central Valley. ⚠️ <b>Caution:</b> Use low gears during the steep descent to prevent brake overheating.',
+                icon: '🚗' 
+            },
+            { 
+                type: 'drive', 
+                label: 'Segment 2: Fresno to Three Rivers', 
+                from: 'Fresno', 
+                to: 'Three Rivers', 
+                dist: 150, 
+                time: '2h 00m', 
+                detail: 'Drive across the agricultural Central Valley before climbing back up into the Sierra Nevada foothills to arrive in Three Rivers, the gateway to Sequoia National Park.',
+                icon: '🚗' 
+            },
             { type: 'stay', label: 'Three Rivers', detail: 'Sequoia Park foothills.', icon: '🏨' }
         ]
     },
@@ -161,7 +199,26 @@ export const tripData = [
         day: 8, date: "Wed, Aug 26", title: "Los Angeles: Hollywood & Observatory", 
         summary: "Make the drive to Los Angeles, then explore Hollywood landmarks and take in panoramic city views from Griffith Observatory.",
         sequence: [
-            { type: 'drive', label: 'Drive to Los Angeles', from: 'Three Rivers', to: 'Los Angeles', dist: 320, time: '3h 50m', icon: '🚗' },
+            { 
+                type: 'drive', 
+                label: 'Segment 1: Three Rivers to Bakersfield', 
+                from: 'Three Rivers', 
+                to: 'Bakersfield', 
+                dist: 140, 
+                time: '1h 45m', 
+                detail: 'Drive south from the Sierra foothills through the heart of the Central Valley farmland to Bakersfield.',
+                icon: '🚗' 
+            },
+            { 
+                type: 'drive', 
+                label: 'Segment 2: Bakersfield to Los Angeles (via Tejon Pass)', 
+                from: 'Bakersfield', 
+                to: 'Los Angeles', 
+                dist: 180, 
+                time: '2h 05m', 
+                detail: 'Climb the steep Tejon Pass (known locally as the Grapevine) up to 1,270m, before descending into the northern edge of the Los Angeles basin. ⚠️ <b>Caution:</b> Watch for heavy truck traffic and sudden strong crosswinds on the pass.',
+                icon: '🚗' 
+            },
             { 
                 type: 'options', 
                 label: 'Los Angeles: Hollywood Trails', 
