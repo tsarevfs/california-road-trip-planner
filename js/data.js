@@ -38,9 +38,36 @@ export const tripData = [
                 label: 'Yosemite: Arrival Trails', 
                 detail: 'Choose an easy hike for your first day in the park.',
                 hikes: [
-                    { name: 'Tenaya Lake Loop', dist: '4.0 km', time: '1h 15m', diff: 'Easy', color: 'bg-emerald-500', link: 'https://www.komoot.com/smarttour/e1193350215' },
-                    { name: 'Lower Yosemite Fall', dist: '1.9 km', time: '35m', diff: 'Easy', color: 'bg-teal-500', link: 'https://www.komoot.com/smarttour/e1193350209' },
-                    { name: 'Glacier Point Loop', dist: '1.5 km', time: '25m', diff: 'Easy', color: 'bg-blue-500', link: 'https://www.komoot.com/smarttour/e1193350216' }
+                    { 
+                        name: 'Tenaya Lake Loop', 
+                        dist: '4.0 km', 
+                        time: '1h 15m', 
+                        diff: 'Easy', 
+                        color: 'bg-emerald-500', 
+                        link: 'https://www.komoot.com/smarttour/e1193350215',
+                        image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A beautiful, easy trail surrounding the alpine waters of Tenaya Lake, framed by dramatic granite domes. Perfect for a relaxing stroll and a quick dip in the cool waters at high elevation.'
+                    },
+                    { 
+                        name: 'Lower Yosemite Fall', 
+                        dist: '1.9 km', 
+                        time: '35m', 
+                        diff: 'Easy', 
+                        color: 'bg-teal-500', 
+                        link: 'https://www.komoot.com/smarttour/e1193350209',
+                        image: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'An easy, paved walk leading straight to the base of the spectacular lower section of North America\'s tallest waterfall. Enjoy the misty spray and towering pine forests framing the roaring cascade.'
+                    },
+                    { 
+                        name: 'Glacier Point Loop', 
+                        dist: '1.5 km', 
+                        time: '25m', 
+                        diff: 'Easy', 
+                        color: 'bg-blue-500', 
+                        link: 'https://www.komoot.com/smarttour/e1193350216',
+                        image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A short, accessible path offering iconic, sweeping views of Half Dome, Yosemite Valley, and the high country. An essential stop to appreciate the massive scale of Yosemite\'s glacial geology.'
+                    }
                 ]
             },
             { type: 'stay', label: 'Yosemite Gateway', detail: 'El Portal or Mariposa Area.', icon: '🏨' }
@@ -54,9 +81,36 @@ export const tripData = [
                 label: 'Yosemite: Major Challenges', 
                 detail: 'Your core hiking day. Select your valley trail.',
                 hikes: [
-                    { name: 'Mist Trail (Vernal/Nevada)', dist: '11.0 km', time: '4h 30m', diff: 'Hard', color: 'bg-red-500', link: 'https://www.komoot.com/smarttour/e1193350212' },
-                    { name: 'Sentinel Dome & Taft Pt', dist: '8.2 km', time: '3h 15m', diff: 'Moderate', color: 'bg-orange-500', link: 'https://www.komoot.com/smarttour/e1193350213' },
-                    { name: 'Upper Yosemite Fall', dist: '12.0 km', time: '6h 00m', diff: 'Extreme', color: 'bg-stone-800', link: 'https://www.komoot.com/smarttour/e1193350214' }
+                    { 
+                        name: 'Mist Trail (Vernal/Nevada)', 
+                        dist: '11.0 km', 
+                        time: '4h 30m', 
+                        diff: 'Hard', 
+                        color: 'bg-red-500', 
+                        link: 'https://www.komoot.com/smarttour/e1193350212',
+                        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'Yosemite\'s signature hike climbs steep stone steps alongside roaring giant waterfalls that spray hikers with cooling mist. Reaching the top of Nevada Fall offers breathtaking views of the surrounding wilderness.'
+                    },
+                    { 
+                        name: 'Sentinel Dome & Taft Pt', 
+                        dist: '8.2 km', 
+                        time: '3h 15m', 
+                        diff: 'Moderate', 
+                        color: 'bg-orange-500', 
+                        link: 'https://www.komoot.com/smarttour/e1193350213',
+                        image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'Combine two contrasting highlights: walk out to a cliffside fissure at Taft Point with vertical drop-offs, then scale the dome for a 360-degree panorama of the entire national park.'
+                    },
+                    { 
+                        name: 'Upper Yosemite Fall', 
+                        dist: '12.0 km', 
+                        time: '6h 00m', 
+                        diff: 'Extreme', 
+                        color: 'bg-stone-800', 
+                        link: 'https://www.komoot.com/smarttour/e1193350214',
+                        image: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A grueling, strenuous climb up historic switchbacks to the top of the tallest waterfall in North America. Reaching the summit rewards you with dramatic views looking straight down into the valley below.'
+                    }
                 ]
             },
             { type: 'drive', label: 'South to Sequoia Area', from: 'Yosemite Valley', to: 'Three Rivers', dist: 300, time: '4h 15m', icon: '🚗' },
@@ -71,9 +125,36 @@ export const tripData = [
                 label: 'Sequoia National Park', 
                 detail: 'Hikes through the worlds largest trees.',
                 hikes: [
-                    { name: 'General Sherman Tree', dist: '3.5 km', time: '1h 10m', diff: 'Easy', color: 'bg-green-600', link: 'https://www.komoot.com/smarttour/e1193350218' },
-                    { name: 'Moro Rock Stairway', dist: '1.2 km', time: '45m', diff: 'Moderate', color: 'bg-amber-600', link: 'https://www.komoot.com/smarttour/e1193350220' },
-                    { name: 'Tokopah Falls', dist: '6.5 km', time: '2h 30m', diff: 'Moderate', color: 'bg-indigo-600', link: 'https://www.komoot.com/smarttour/e1193350219' }
+                    { 
+                        name: 'General Sherman Tree', 
+                        dist: '3.5 km', 
+                        time: '1h 10m', 
+                        diff: 'Easy', 
+                        color: 'bg-green-600', 
+                        link: 'https://www.komoot.com/smarttour/e1193350218',
+                        image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'An easy walk through Giant Forest leads to the largest living single-stem tree on Earth by volume. Walk among ancient, massive sequoias that have survived for thousands of years in this giant redwood grove.'
+                    },
+                    { 
+                        name: 'Moro Rock Stairway', 
+                        dist: '1.2 km', 
+                        time: '45m', 
+                        diff: 'Moderate', 
+                        color: 'bg-amber-600', 
+                        link: 'https://www.komoot.com/smarttour/e1193350220',
+                        image: 'https://images.unsplash.com/photo-1472214222541-d510753a4907?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'Climb a narrow, handrail-assisted concrete staircase carved directly into the top of a massive granite dome. At the summit, enjoy an unobstructed, panoramic view of the Great Western Divide and park canyons.'
+                    },
+                    { 
+                        name: 'Tokopah Falls', 
+                        dist: '6.5 km', 
+                        time: '2h 30m', 
+                        diff: 'Moderate', 
+                        color: 'bg-indigo-600', 
+                        link: 'https://www.komoot.com/smarttour/e1193350219',
+                        image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A gentle trail winding alongside the Marble Fork of the Kaweah River through pine forests to the base of a 1,200-foot cascading waterfall. Keep an eye out for yellow-bellied marmots sunning themselves.'
+                    }
                 ]
             },
             { type: 'drive', label: 'Descent to LA', from: 'Sequoia NP', to: 'Los Angeles', dist: 320, time: '3h 50m', icon: '🚗' },
@@ -104,9 +185,36 @@ export const tripData = [
                 label: 'San Francisco Coastline', 
                 detail: 'Choose a trail with Golden Gate views.',
                 hikes: [
-                    { name: 'Lands End Trail', dist: '5.5 km', time: '1h 45m', diff: 'Easy', color: 'bg-cyan-600', link: 'https://www.komoot.com/smarttour/e1193350225' },
-                    { name: 'Presidio Scenic Loop', dist: '9.0 km', time: '3h 00m', diff: 'Moderate', color: 'bg-indigo-700', link: 'https://www.komoot.com/smarttour/e1193350226' },
-                    { name: 'Battery to Bluffs', dist: '3.2 km', time: '1h 10m', diff: 'Moderate', color: 'bg-blue-800', link: 'https://www.komoot.com/smarttour/e1193350227' }
+                    { 
+                        name: 'Lands End Trail', 
+                        dist: '5.5 km', 
+                        time: '1h 45m', 
+                        diff: 'Easy', 
+                        color: 'bg-cyan-600', 
+                        link: 'https://www.komoot.com/smarttour/e1193350225',
+                        image: 'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'Follow the windswept coastal cliffs of San Francisco for spectacular views of the Golden Gate Bridge and the Pacific Ocean. Discover ruins of the historic Sutro Baths and walk through groves of cypress trees.'
+                    },
+                    { 
+                        name: 'Presidio Scenic Loop', 
+                        dist: '9.0 km', 
+                        time: '3h 00m', 
+                        diff: 'Moderate', 
+                        color: 'bg-indigo-700', 
+                        link: 'https://www.komoot.com/smarttour/e1193350226',
+                        image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A loop trail winding through historic military architecture, sandy beaches, and lush eucalyptus groves in the heart of SF. Features outstanding vantage points of the bay and the Golden Gate strait.'
+                    },
+                    { 
+                        name: 'Battery to Bluffs', 
+                        dist: '3.2 km', 
+                        time: '1h 10m', 
+                        diff: 'Moderate', 
+                        color: 'bg-blue-800', 
+                        link: 'https://www.komoot.com/smarttour/e1193350227',
+                        image: 'https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A short, dramatic trail featuring rugged wooden steps clinging to coastal bluffs, taking you down close to the shoreline. Enjoy wildflower displays and historic concrete gun batteries overlooking the Pacific.'
+                    }
                 ]
             },
             { type: 'stay', label: 'San Francisco', detail: 'Final trip night.', icon: '🏨' }

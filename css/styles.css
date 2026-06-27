@@ -74,7 +74,7 @@ h1, h2, h3, .brand-font { font-family: 'Playfair Display', serif; }
 }
 
 .hike-tile {
-    min-width: 280px;
+    min-width: 320px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .hike-tile:hover {

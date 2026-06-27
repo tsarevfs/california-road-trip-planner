@@ -47,15 +47,14 @@ export function renderDayView(data) {
         } else if (step.type === 'options') {
             const hikeCards = step.hikes.map(h => `
                 <div class="hike-tile bg-white border border-stone-100 rounded-2xl overflow-hidden shadow-sm flex flex-col">
-                    <div class="hike-hero ${h.color} flex items-center justify-center opacity-80">
-                        <span class="text-4xl">🥾</span>
-                    </div>
+                    <div class="hike-hero" style="background-image: url('${h.image}')"></div>
                     <div class="p-5 flex-1 flex flex-col">
                         <div class="flex justify-between items-start mb-2">
                             <h5 class="font-bold text-stone-800 text-sm leading-tight pr-3">${h.name}</h5>
                             <span class="text-[9px] font-bold px-2 py-0.5 rounded bg-stone-100 text-stone-500 uppercase tracking-tighter">${h.diff}</span>
                         </div>
-                        <div class="text-[10px] text-stone-400 font-bold mb-5">📏 ${h.dist} • ⏱️ ${h.time}</div>
+                        <div class="text-[10px] text-stone-400 font-bold mb-3">📏 ${h.dist} • ⏱️ ${h.time}</div>
+                        <p class="text-xs text-stone-600 mb-5 leading-relaxed flex-1">${h.summary}</p>
                         <a href="${h.link}" target="_blank" class="mt-auto block w-full text-center py-2.5 bg-stone-900 text-white text-[11px] font-bold rounded-lg hover:bg-stone-800 transition">Go to Komoot</a>
                     </div>
                 </div>
