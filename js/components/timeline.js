@@ -8,7 +8,7 @@ export function initTimeline(tripData, onDaySelect) {
     if (!list) return;
 
     list.innerHTML = tripData.map(item => `
-        <div class="timeline-item p-4 lg:p-6 cursor-pointer border-b-2 lg:border-b lg:border-stone-100 lg:border-l-4 border-stone-100 lg:border-l-transparent hover:bg-stone-50 transition group flex-shrink-0 w-72 sm:w-[352px] lg:w-auto" data-day="${item.day}">
+        <div class="timeline-item p-4 lg:p-6 cursor-pointer border-b-2 lg:border-b lg:border-stone-100 lg:border-l-4 border-stone-100 lg:border-l-transparent hover:bg-stone-50 transition group flex-shrink-0 w-max min-w-[150px] lg:min-w-0 lg:w-auto" data-day="${item.day}">
             <div class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1.5">${item.date}</div>
             <div class="font-bold text-stone-800 text-sm group-hover:text-stone-950 truncate">${item.title}</div>
         </div>
