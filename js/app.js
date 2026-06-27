@@ -16,12 +16,34 @@ function showDay(dayId) {
     }
 }
 
+/**
+ * Handles URL hash changes and renders the corresponding day.
+ */
+function handleHashChange() {
+    const hash = window.location.hash;
+    const match = hash.match(/^#day-(\d+)$/);
+    if (match) {
+        const dayId = parseInt(match[1], 10);
+        if (tripData.some(d => d.day === dayId)) {
+            showDay(dayId);
+            return;
+        }
+    }
+    // Default to Day 1 if no valid hash is present
+    showDay(1);
+}
+
 // Initialise the application modules once the DOM content is fully loaded
 window.addEventListener('DOMContentLoaded', () => {
-    initTimeline(tripData, showDay);
+    initTimeline(tripData, (dayId) => {
+        window.location.hash = `day-${dayId}`;
+    });
     initTodoList(todos);
     initDrivingChart(tripData);
     
-    // Display the first day by default
-    showDay(1);
+    // Listen to hash changes for routing and back/forward navigation
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Initialize day view based on initial page URL hash
+    handleHashChange();
 });

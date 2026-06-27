@@ -40,38 +40,38 @@ export const tripData = [
         sequence: [
             { 
                 type: 'options', 
-                label: 'Yosemite: Major Challenges', 
-                detail: 'Your core hiking day. Select your valley trail.',
+                label: 'Yosemite: Valley Hikes', 
+                detail: 'Conquer Yosemite Valley\'s iconic, strenuous trails.',
                 hikes: [
                     { 
-                        name: 'Mist Trail (Vernal/Nevada)', 
-                        dist: '11.0 km', 
-                        time: '4h 30m', 
-                        diff: 'Hard', 
-                        color: 'bg-red-500', 
-                        link: 'https://www.komoot.com/highlight/202685',
-                        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'Yosemite\'s signature hike climbs steep stone steps alongside roaring giant waterfalls that spray hikers with cooling mist. Reaching the top of Nevada Fall offers breathtaking views of the surrounding wilderness.'
-                    },
-                    { 
-                        name: 'Sentinel Dome & Taft Pt', 
-                        dist: '8.2 km', 
-                        time: '3h 15m', 
+                        name: 'Mist Trail to Vernal Fall', 
+                        dist: '7.5 km', 
+                        time: '2h 30m', 
                         diff: 'Moderate', 
-                        color: 'bg-orange-500', 
-                        link: 'https://www.komoot.com/highlight/227447',
-                        image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'Combine two contrasting highlights: walk out to a cliffside fissure at Taft Point with vertical drop-offs, then scale the dome for a 360-degree panorama of the entire national park.'
+                        color: 'bg-emerald-600', 
+                        link: 'https://www.komoot.com/smarttour/e1193360370',
+                        image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A classic Yosemite hike climbing steep stone stairs alongside the roaring Merced River to the top of Vernal Fall, rewarding you with spectacular waterfall views and cooling mist.'
                     },
                     { 
-                        name: 'Upper Yosemite Fall', 
-                        dist: '12.0 km', 
-                        time: '6h 00m', 
-                        diff: 'Extreme', 
-                        color: 'bg-stone-800', 
-                        link: 'https://www.komoot.com/highlight/114950',
+                        name: 'Vernal & Nevada Falls via Mist Trail', 
+                        dist: '13.4 km', 
+                        time: '5h 00m', 
+                        diff: 'Difficult', 
+                        color: 'bg-red-600', 
+                        link: 'https://www.komoot.com/smarttour/e1193350212',
                         image: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'A grueling, strenuous climb up historic switchbacks to the top of the tallest waterfall in North America. Reaching the summit rewards you with dramatic views looking straight down into the valley below.'
+                        summary: 'The ultimate Yosemite valley hike. Climb past Vernal Fall and continue up the steep granite cliffs to the top of Nevada Fall, returning via the John Muir Trail for sweeping valley vistas.'
+                    },
+                    { 
+                        name: 'Clark Point & Vernal Falls Loop', 
+                        dist: '10.3 km', 
+                        time: '3h 45m', 
+                        diff: 'Moderate', 
+                        color: 'bg-amber-600', 
+                        link: 'https://www.komoot.com/smarttour/e1193363314',
+                        image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A wonderful loop that takes you up the Mist Trail to Vernal Fall, then ascends to Clark Point for a panoramic overlook before winding back down the John Muir Trail.'
                     }
                 ]
             },
@@ -133,34 +133,34 @@ export const tripData = [
                 detail: 'Hikes through the worlds largest trees.',
                 hikes: [
                     { 
-                        name: 'Sherman Tree, Congress, Trail of the Sequoias, and Tharp\'s Log Loop', 
-                        dist: '11.5 km', 
-                        time: '3h 20m', 
+                        name: 'General Sherman Tree Loop', 
+                        dist: '9.8 km', 
+                        time: '3h 00m', 
                         diff: 'Moderate', 
                         color: 'bg-green-600', 
-                        link: 'https://www.komoot.com/smarttour/e2813460015/sherman-tree-congress-trail-of-the-sequoias-and-tharp-s-log-loop?ref=wsd&t_s=referral&t_cid=route_share&t_ref_username=5512427181359',
+                        link: 'https://www.komoot.com/smarttour/e809103831',
                         image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'A scenic loop combining the famous General Sherman Tree and Congress Trail with the quieter Trail of the Sequoias and Tharp\'s Log. Walk among ancient, massive giant redwood groves.'
+                        summary: 'A scenic, moderate walk through the heart of the Giant Forest to visit General Sherman, the largest tree on Earth by volume, walking among ancient redwoods.'
                     },
                     { 
-                        name: 'Moro Rock Stairway', 
-                        dist: '1.2 km', 
-                        time: '45m', 
+                        name: 'Congress Trail Loop', 
+                        dist: '6.3 km', 
+                        time: '2h 00m', 
                         diff: 'Moderate', 
                         color: 'bg-amber-600', 
-                        link: 'https://www.komoot.com/highlight/154796',
-                        image: 'https://images.unsplash.com/photo-1472214222541-d510753a4907?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'Climb a narrow, handrail-assisted concrete staircase carved directly into the top of a massive granite dome. At the summit, enjoy an unobstructed, panoramic view of the Great Western Divide and park canyons.'
+                        link: 'https://www.komoot.com/smarttour/e1324884824',
+                        image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A paved loop starting from the General Sherman Tree that leads deep into the Giant Forest, passing the impressive President, Senate, and House tree groups.'
                     },
                     { 
-                        name: 'Tokopah Falls', 
-                        dist: '6.5 km', 
-                        time: '2h 30m', 
+                        name: 'Moro Rock Trail', 
+                        dist: '6.8 km', 
+                        time: '2h 15m', 
                         diff: 'Moderate', 
                         color: 'bg-indigo-600', 
-                        link: 'https://www.komoot.com/highlight/183889',
-                        image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'A gentle trail winding alongside the Marble Fork of the Kaweah River through pine forests to the base of a 1,200-foot cascading waterfall. Keep an eye out for yellow-bellied marmots sunning themselves.'
+                        link: 'https://www.komoot.com/smarttour/e2813461461',
+                        image: 'https://images.unsplash.com/photo-1472214222541-d510753a4907?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'Hike from the Giant Forest Museum through pine forests to the base of Moro Rock, then climb the concrete stairway carved into the granite dome for panoramic views.'
                     }
                 ]
             },
@@ -172,6 +172,43 @@ export const tripData = [
         summary: "Make the drive to Los Angeles, then explore Hollywood landmarks and take in panoramic city views from Griffith Observatory.",
         sequence: [
             { type: 'drive', label: 'Drive to Los Angeles', from: 'Three Rivers', to: 'Los Angeles', dist: 320, time: '3h 50m', icon: '🚗' },
+            { 
+                type: 'options', 
+                label: 'Los Angeles: Hollywood Trails', 
+                detail: 'Choose a hiking trail in Griffith Park for scenic city viewpoints and Hollywood Sign vistas.',
+                hikes: [
+                    { 
+                        name: 'Hollywood Sign via Innsdale Trail', 
+                        dist: '4.1 km', 
+                        time: '1h 15m', 
+                        diff: 'Easy', 
+                        color: 'bg-emerald-600', 
+                        link: 'https://www.komoot.com/smarttour/e2813322722',
+                        image: 'https://images.unsplash.com/photo-1580137189272-c9379f8864fd?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A pleasant, easy walk along the Innsdale Trail with direct views of the iconic Hollywood Sign. Great for a relaxed walk and photography.'
+                    },
+                    { 
+                        name: 'Mount Hollywood & 3 Mile Trail', 
+                        dist: '6.4 km', 
+                        time: '2h 00m', 
+                        diff: 'Moderate', 
+                        color: 'bg-amber-600', 
+                        link: 'https://www.komoot.com/smarttour/e2813380432',
+                        image: 'https://images.unsplash.com/photo-1549417229-aa67d3263c09?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A scenic trail winding up Mount Hollywood from Griffith Observatory, offering 360-degree views of the LA Basin, downtown skyline, and the Hollywood Sign.'
+                    },
+                    { 
+                        name: 'Griffith Park Hollywood Sign Trail', 
+                        dist: '16.2 km', 
+                        time: '5h 00m', 
+                        diff: 'Difficult', 
+                        color: 'bg-red-600', 
+                        link: 'https://www.komoot.com/smarttour/e2813338925',
+                        image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'A comprehensive, challenging hike exploring the rugged ridges of Griffith Park, climbing high to the peak directly behind the Hollywood Sign letters.'
+                    }
+                ]
+            },
             { type: 'activity', label: 'Griffith Observatory', detail: 'Explore scientific exhibits, planetarium shows, and panoramic views of the Los Angeles basin and Hollywood Sign.', icon: '🔭' },
             { type: 'activity', label: 'Hollywood Walk of Fame', detail: 'Stroll along Hollywood Boulevard and visit the historic Chinese Theatre and Sunset Strip.', icon: '⭐' },
             { type: 'stay', label: 'Los Angeles', detail: 'Hollywood or Santa Monica basecamp.', icon: '🏨' }
@@ -272,34 +309,34 @@ export const tripData = [
                 detail: 'Choose a trail with Golden Gate views.',
                 hikes: [
                     { 
-                        name: 'Lands End Trail', 
-                        dist: '5.5 km', 
-                        time: '1h 45m', 
-                        diff: 'Easy', 
-                        color: 'bg-cyan-600', 
-                        link: 'https://www.komoot.com/highlight/160351',
-                        image: 'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'Follow the windswept coastal cliffs of San Francisco for spectacular views of the Golden Gate Bridge and the Pacific Ocean. Discover ruins of the historic Sutro Baths and walk through groves of cypress trees.'
-                    },
-                    { 
-                        name: 'Presidio Scenic Loop', 
-                        dist: '9.0 km', 
-                        time: '3h 00m', 
-                        diff: 'Moderate', 
-                        color: 'bg-indigo-700', 
-                        link: 'https://www.komoot.com/highlight/284307',
-                        image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'A loop trail winding through historic military architecture, sandy beaches, and lush eucalyptus groves in the heart of San Francisco. Features outstanding vantage points of the bay and the Golden Gate strait.'
-                    },
-                    { 
-                        name: 'Battery to Bluffs', 
-                        dist: '3.2 km', 
+                        name: 'Lands End Trail Loop', 
+                        dist: '3.5 km', 
                         time: '1h 10m', 
                         diff: 'Moderate', 
-                        color: 'bg-blue-800', 
-                        link: 'https://www.komoot.com/highlight/263592',
+                        color: 'bg-cyan-600', 
+                        link: 'https://www.komoot.com/smarttour/e1220837025',
+                        image: 'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'Follow the windswept coastal cliffs of San Francisco for spectacular views of the Golden Gate Bridge and the Pacific Ocean. Discover ruins of the historic Sutro Baths.'
+                    },
+                    { 
+                        name: 'Ecology Trail and Lovers\' Lane Loop', 
+                        dist: '4.5 km', 
+                        time: '1h 20m', 
+                        diff: 'Easy', 
+                        color: 'bg-indigo-600', 
+                        link: 'https://www.komoot.com/smarttour/e2813371162',
+                        image: 'https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: 'Walk through the historic Presidio, following the peaceful Ecology Trail and crossing the famous Lovers\' Lane brick footpath beneath eucalyptus and pine groves.'
+                    },
+                    { 
+                        name: 'San Francisco Bay Trail (Pier 45)', 
+                        dist: '5.7 km', 
+                        time: '1h 30m', 
+                        diff: 'Easy', 
+                        color: 'bg-blue-600', 
+                        link: 'https://www.komoot.com/smarttour/e1282005883',
                         image: 'https://images.unsplash.com/photo-1485081669829-bacb8c7bb1f3?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'A short, dramatic trail featuring rugged wooden steps clinging to coastal bluffs, taking you down close to the shoreline. Enjoy wildflower displays and historic concrete gun batteries overlooking the Pacific.'
+                        summary: 'Stroll along the historic waterfront of San Francisco Bay, passing Pier 45, Fisherman\'s Wharf, and enjoying panoramic views of Alcatraz and the Golden Gate.'
                     }
                 ]
             },
