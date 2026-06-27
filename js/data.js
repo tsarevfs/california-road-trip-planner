@@ -239,15 +239,25 @@ export const tripData = [
             },
             { 
                 type: 'drive', 
-                label: 'Segment 3: Solvang to Morro Bay', 
+                label: 'Segment 3: Solvang to San Luis Obispo', 
                 from: 'Solvang', 
-                to: 'Morro Bay', 
-                dist: 110, 
-                time: '1h 10m', 
-                detail: 'Drive through rolling wine country back to US-101 North. Pass through Pismo Beach and make a stop in San Luis Obispo (SLO) for lunch and a stroll along the historic mission before heading up CA-1 North to Morro Bay.',
+                to: 'San Luis Obispo', 
+                dist: 90, 
+                time: '1h 00m', 
+                detail: 'Drive through rolling wine country back to US-101 North, passing Pismo Beach and heading to San Luis Obispo for your lunch stop.',
                 icon: '🚗' 
             },
             { type: 'activity', label: 'Lunch in SLO', detail: 'Historic Mission district and creek walk.', icon: '🥗' },
+            { 
+                type: 'drive', 
+                label: 'Segment 4: San Luis Obispo to Morro Bay', 
+                from: 'San Luis Obispo', 
+                to: 'Morro Bay', 
+                dist: 20, 
+                time: '15m', 
+                detail: 'After lunch and a stroll along the creek, take a short drive up CA-1 North directly to Morro Bay.',
+                icon: '🚗' 
+            },
             { type: 'stay', label: 'Morro Bay', detail: 'Coastal night by Morro Rock.', icon: '🏨' }
         ]
     },
