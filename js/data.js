@@ -4,7 +4,7 @@ export const tripData = [
         sequence: [
             { type: 'travel', label: 'Flight MUC ➔ RNO', detail: 'Arrival at Reno-Tahoe. Car rental pick-up.', time: '12h+', icon: '✈️' },
             { type: 'drive', label: 'Drive to South Lake Tahoe', from: 'Reno-Tahoe Airport', to: 'South Lake Tahoe', dist: 95, time: '1h 15m', icon: '🚗' },
-            { type: 'stay', label: 'Check-in: South Lake Tahoe', detail: 'Extra night accommodation needed.', icon: '🏨' }
+            { type: 'stay', label: 'The Landing Resort', detail: 'Extra night in South Lake Tahoe.', icon: '🏨' }
         ]
     },
     { 
@@ -26,13 +26,13 @@ export const tripData = [
         day: 4, date: "Sat, Aug 22", title: "Farewell Tahoe", 
         sequence: [
             { type: 'activity', label: 'Brunch at Toulouse', detail: '11:00 AM. Final group celebration.', icon: '🥞' },
-            { type: 'stay', label: 'The Landing Resort', detail: 'Final night in South Lake Tahoe.', icon: '🏨' }
+            { type: 'drive', label: 'Tioga Pass Scenic Route', from: 'South Lake Tahoe', to: 'Lee Vining', dist: 275, time: '3h 45m', icon: '🚗' },
+            { type: 'stay', label: 'Yosemite Gateway', detail: 'Lee Vining or Yosemite Area.', icon: '🏨' }
         ]
     },
     { 
         day: 5, date: "Sun, Aug 23", title: "Yosemite Entry", 
         sequence: [
-            { type: 'drive', label: 'Tioga Pass Scenic Route', from: 'South Lake Tahoe', to: 'Lee Vining', dist: 275, time: '3h 45m', icon: '🚗' },
             { 
                 type: 'options', 
                 label: 'Yosemite: Arrival Trails', 
@@ -126,14 +126,14 @@ export const tripData = [
                 detail: 'Hikes through the worlds largest trees.',
                 hikes: [
                     { 
-                        name: 'General Sherman Tree', 
-                        dist: '3.5 km', 
-                        time: '1h 10m', 
-                        diff: 'Easy', 
+                        name: 'Sherman Tree, Congress, Trail of the Sequoias, and Tharp\'s Log Loop', 
+                        dist: '11.5 km', 
+                        time: '3h 20m', 
+                        diff: 'Moderate', 
                         color: 'bg-green-600', 
-                        link: 'https://www.komoot.com/highlight/151842',
+                        link: 'https://www.komoot.com/smarttour/e2813460015/sherman-tree-congress-trail-of-the-sequoias-and-tharp-s-log-loop?ref=wsd&t_s=referral&t_cid=route_share&t_ref_username=5512427181359',
                         image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: 'An easy walk through Giant Forest leads to the largest living single-stem tree on Earth by volume. Walk among ancient, massive sequoias that have survived for thousands of years in this giant redwood grove.'
+                        summary: 'A scenic loop combining the famous General Sherman Tree and Congress Trail with the quieter Trail of the Sequoias and Tharp\'s Log. Walk among ancient, massive giant redwood groves.'
                     },
                     { 
                         name: 'Moro Rock Stairway', 
@@ -180,7 +180,36 @@ export const tripData = [
     { 
         day: 10, date: "Fri, Aug 28", title: "PCH Northbound", 
         sequence: [
-            { type: 'drive', label: 'Highway 1 Coast Drive', from: 'Los Angeles', to: 'San Luis Obispo', dist: 330, time: '3h 45m', icon: '🚗' },
+            { 
+                type: 'drive', 
+                label: 'Segment 1: LA to Santa Barbara', 
+                from: 'Los Angeles', 
+                to: 'Santa Barbara', 
+                dist: 150, 
+                time: '1h 45m', 
+                detail: 'Start in Santa Monica and drive along the scenic coastal CA-1 through Malibu, past Zuma Beach and Point Mugu. ⚠️ <b>Traffic Tip:</b> Leave early in the morning (before 8:00 AM) to avoid heavy morning gridlock exiting the LA metro area.',
+                icon: '🚗' 
+            },
+            { 
+                type: 'drive', 
+                label: 'Segment 2: Santa Barbara to Solvang', 
+                from: 'Santa Barbara', 
+                to: 'Solvang', 
+                dist: 70, 
+                time: '50m', 
+                detail: 'Head inland to the historic Danish village of Solvang. <b>Route choice:</b> Take CA-154 (San Marcos Pass) for stunning high-altitude mountain and lake views, or take the coastal US-101 past Gaviota State Park. ⚠️ <b>Avoid:</b> CA-154 can be winding and slow behind trucks; take US-101 if you prefer a flatter, easier drive.',
+                icon: '🚗' 
+            },
+            { 
+                type: 'drive', 
+                label: 'Segment 3: Solvang to Morro Bay', 
+                from: 'Solvang', 
+                to: 'Morro Bay', 
+                dist: 110, 
+                time: '1h 10m', 
+                detail: 'Drive through rolling wine country back to US-101 North. Pass through Pismo Beach and make a stop in San Luis Obispo (SLO) for lunch and a stroll along the historic mission before heading up CA-1 North to Morro Bay.',
+                icon: '🚗' 
+            },
             { type: 'activity', label: 'Lunch in SLO', detail: 'Historic Mission district and creek walk.', icon: '🥗' },
             { type: 'stay', label: 'Morro Bay', detail: 'Coastal night by Morro Rock.', icon: '🏨' }
         ]
@@ -188,8 +217,37 @@ export const tripData = [
     { 
         day: 11, date: "Sat, Aug 29", title: "Big Sur Coastal", 
         sequence: [
-            { type: 'drive', label: 'The Iconic Coastline', from: 'Morro Bay', to: 'San Francisco', dist: 380, time: '5h 45m', icon: '🚗' },
+            { 
+                type: 'drive', 
+                label: 'Segment 1: Morro Bay to McWay Falls', 
+                from: 'Morro Bay', 
+                to: 'McWay Falls', 
+                dist: 130, 
+                time: '2h 00m', 
+                detail: 'Drive past Cambria and San Simeon. Stop at the Elephant Seal Rookery at San Simeon to view the massive elephant seals, then cross Ragged Point (the "Portal to Big Sur"). Drive up the wild coastal cliffs to Julia Pfeiffer Burns State Park. ⚠️ <b>Safety Tip:</b> Take it slow—this section has tight curves and dramatic cliffs.',
+                icon: '🚗' 
+            },
+            { 
+                type: 'drive', 
+                label: 'Segment 2: McWay Falls to Carmel-by-the-Sea', 
+                from: 'McWay Falls', 
+                to: 'Carmel-by-the-Sea', 
+                dist: 60, 
+                time: '1h 00m', 
+                detail: 'Continue north on the most dramatic portion of Highway 1, winding past redwood groves and crossing the world-famous Bixby Creek Bridge. ⚠️ <b>Road Status:</b> Highway 1 through Big Sur is fully open. Expect localized 24/7 one-way controlled traffic delays for maintenance (e.g. 5-6 miles north of Big Sur Valley). Always monitor Caltrans QuickMap.',
+                icon: '🚗' 
+            },
             { type: 'activity', label: 'Bixby Creek Bridge', detail: 'Iconic photography stop.', icon: '📸' },
+            { 
+                type: 'drive', 
+                label: 'Segment 3: Carmel-by-the-Sea to San Francisco', 
+                from: 'Carmel-by-the-Sea', 
+                to: 'San Francisco', 
+                dist: 190, 
+                time: '2h 45m', 
+                detail: 'Depart Carmel, driving north past Monterey, through the surf town of Santa Cruz, and along the scenic cliffs of Half Moon Bay before entering San Francisco. ⚠️ <b>Avoid:</b> Driving this section after dark, as coastal fog can roll in rapidly and severely limit visibility.',
+                icon: '🚗' 
+            },
             { type: 'stay', label: 'San Francisco', detail: 'Union Square area.', icon: '🏨' }
         ]
     },
@@ -246,9 +304,8 @@ export const tripData = [
 ];
 
 export const todos = [
-    { id: 1, text: "Book South Tahoe night (Aug 19)", done: false },
-    { id: 2, text: "Yosemite Entry Reservation (Aug 23)", done: false },
-    { id: 3, text: "Yosemite/Mariposa Lodging (Aug 23)", done: false },
-    { id: 4, text: "Sequoia Area Lodging (Aug 24)", done: false },
-    { id: 5, text: "RNO Car Rental Confirmation", done: false }
+    { id: 1, text: "Yosemite Entry Reservation (Aug 23)", done: false },
+    { id: 2, text: "Yosemite/Mariposa Lodging (Aug 22-23)", done: false },
+    { id: 3, text: "Sequoia Area Lodging (Aug 24)", done: false },
+    { id: 4, text: "RNO Car Rental Confirmation", done: false }
 ];

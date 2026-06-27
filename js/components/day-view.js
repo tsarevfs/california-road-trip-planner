@@ -27,7 +27,7 @@ export function renderDayView(data) {
         let cardContent = '';
         
         if (step.type === 'drive') {
-            const mapUrl = `https://maps.google.com/maps?q=${encodeURIComponent(step.to)}&t=&z=11&ie=UTF8&iwloc=&output=embed`;
+            const mapUrl = `https://maps.google.com/maps?saddr=${encodeURIComponent(step.from)}&daddr=${encodeURIComponent(step.to)}&output=embed`;
             const gLink = `https://www.google.com/maps/dir/${encodeURIComponent(step.from)}/${encodeURIComponent(step.to)}`;
             cardContent = `
                 <div class="flex justify-between items-start mb-6">
@@ -35,6 +35,7 @@ export function renderDayView(data) {
                         <span class="px-2 py-0.5 bg-blue-100 text-blue-700 text-[10px] font-bold uppercase rounded-md mb-2 inline-block">🚗 Drive Segment</span>
                         <h4 class="font-bold text-2xl leading-tight">${step.label}</h4>
                         <p class="text-stone-500 mt-1">${step.from} ➔ ${step.to}</p>
+                        ${step.detail ? `<p class="text-xs text-stone-600 mt-3 leading-relaxed">${step.detail}</p>` : ''}
                     </div>
                     <div class="text-right">
                         <div class="text-2xl font-bold text-stone-800">${step.dist} km</div>
