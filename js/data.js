@@ -191,7 +191,7 @@ export const tripData = [
                         diff: 'Moderate',
                         color: 'bg-amber-600',
                         link: 'TBD',
-                        alltrails: 'TBD',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/guardians-loop-trail',
                         image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'A moderate hike that climbs to the upper portion of Mariposa Grove, passing the historic Guardians cabin and many giant trees. Offers a quieter forest experience.', ru: 'Средний по сложности поход, который поднимается в верхнюю часть рощи Марипоса, проходя мимо исторической хижины Смотрителей и множества гигантских деревьев. Более уединенный маршрут.' }
                     }
