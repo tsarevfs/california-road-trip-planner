@@ -85,30 +85,33 @@ export const tripData = [
                     {
                         name: { en: 'Mist Trail to Vernal Fall', ru: 'Тропа Mist Trail к водопаду Вернал' },
                         dist: { en: '7.5 km', ru: '7.5 км' },
-                        time: { en: '2h 30m', ru: '2ч 30м' },
+                        time: { en: '2h 40m', ru: '2ч 40м' },
                         diff: 'Moderate',
                         color: 'bg-emerald-600',
                         link: 'https://www.komoot.com/smarttour/e1193360370',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/vernal-fall-via-mist-trail',
                         image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'A classic Yosemite hike climbing steep stone stairs alongside the roaring Merced River to the top of Vernal Fall, rewarding you with spectacular waterfall views and cooling mist.', ru: 'Классический поход в Йосемити: подъем по крутым каменным ступеням вдоль бурной реки Мерсед к вершине водопада Вернал, вознаграждающий захватывающими видами и освежающими брызгами.' }
                     },
                     {
                         name: { en: 'Vernal & Nevada Falls via Mist Trail', ru: 'Водопады Вернал и Невада через Mist Trail' },
                         dist: { en: '13.4 km', ru: '13.4 км' },
-                        time: { en: '5h 00m', ru: '5ч 00м' },
+                        time: { en: '5h 19m', ru: '5ч 19м' },
                         diff: 'Difficult',
                         color: 'bg-red-600',
                         link: 'https://www.komoot.com/smarttour/e1193350212',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/vernal-and-nevada-falls-via-mist-trail-loop',
                         image: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'The ultimate Yosemite valley hike. Climb past Vernal Fall and continue up the steep granite cliffs to the top of Nevada Fall, returning via the John Muir Trail for sweeping valley vistas.', ru: 'Лучший поход по долине Йосемити. Поднимитесь мимо водопада Вернал и продолжите путь по крутым гранитным скалам к вершине водопада Невада, возвращаясь по тропе Джона Мьюра с панорамными видами.' }
                     },
                     {
                         name: { en: 'Clark Point & Vernal Falls Loop', ru: 'Петля Clark Point и водопад Вернал' },
                         dist: { en: '10.3 km', ru: '10.3 км' },
-                        time: { en: '3h 45m', ru: '3ч 45м' },
+                        time: { en: '3h 50m', ru: '3ч 50м' },
                         diff: 'Moderate',
                         color: 'bg-amber-600',
                         link: 'https://www.komoot.com/smarttour/e1193363314',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/vernal-fall-and-clark-point-loop-via-mist-trail',
                         image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'A wonderful loop that takes you up the Mist Trail to Vernal Fall, then ascends to Clark Point for a panoramic overlook before winding back down the John Muir Trail.', ru: 'Прекрасный кольцевой маршрут: подъем по Mist Trail к водопаду Вернал, подъем к смотровой площадке Clark Point и спуск обратно по тропе Джона Мьюра.' }
                     },
@@ -119,8 +122,20 @@ export const tripData = [
                         diff: 'Moderate',
                         color: 'bg-emerald-600',
                         link: 'https://www.komoot.com/smarttour/e2813460839/cathedral-lakes-trail?ref=wsd&t_s=referral&t_cid=route_share&t_ref_username=5512427181359',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/cathedral-lakes-trail',
                         image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'A spectacular hike in Tuolumne Meadows climbing through pine forests to the stunning alpine shores of Lower and Upper Cathedral Lakes under the shadow of Cathedral Peak.', ru: 'Захватывающий поход в Туоломни-Медоуз с подъемом через сосновые леса к потрясающим альпийским берегам Верхнего и Нижнего озер Катидрал у подножия пика Катидрал.' }
+                    },
+                    {
+                        name: { en: 'Lower Yosemite Fall Trail', ru: 'Тропа к Нижнему водопаду Йосемити' },
+                        dist: { en: '4.6 km', ru: '4.6 км' },
+                        time: { en: '1h 10m', ru: '1ч 10м' },
+                        diff: 'Easy',
+                        color: 'bg-teal-500',
+                        link: 'https://www.komoot.com/smarttour/e2813485123/lower-yosemite-fall-trail?ref=wsd&t_s=referral&t_cid=route_share&t_ref_username=5512427181359',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/lower-yosemite-falls-trail',
+                        image: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: { en: 'An easy, paved walk leading straight to the base of the spectacular lower section of North America\'s tallest waterfall. Enjoy the misty spray and towering pine forests framing the roaring cascade.', ru: 'Простая асфальтированная тропа, ведущая прямо к подножию живописного нижнего каскада самого высокого водопада в Северной Америке. Насладитесь брызгами и величественными соснами.' }
                     }
                 ]
             },
@@ -160,23 +175,25 @@ export const tripData = [
                 hikes: [
                     {
                         name: { en: 'Grizzly Giant Loop', ru: 'Петля Гризли Джайант' },
-                        dist: { en: '3.2 km', ru: '3.2 км' },
-                        time: { en: '1h 30m', ru: '1ч 30м' },
+                        dist: { en: '3.3 km', ru: '3.3 км' },
+                        time: { en: '0h 59m', ru: '0ч 59м' },
                         diff: 'Easy',
                         color: 'bg-emerald-600',
-                        link: 'TBD',
+                        link: 'https://www.komoot.com/smarttour/e1308846286/grizzly-giant-loop-trail',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/grizzly-giant-loop-trail',
                         image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: { en: 'An easy, popular loop to see the most famous giant sequoias in Mariposa Grove, including the Grizzly Giant (nearly 3,000 years old) and the California Tunnel Tree. [Komoot Link TBD]', ru: 'Легкий и популярный кольцевой маршрут, позволяющий увидеть самые известные гигантские секвойи в роще Марипоса, включая Гризли Джайант (возрастом около 3000 лет) и Калифорнийское туннельное дерево. [Ссылка на Komoot TBD]' }
+                        summary: { en: 'An easy, popular loop to see the most famous giant sequoias in Mariposa Grove, including the Grizzly Giant (nearly 3,000 years old) and the California Tunnel Tree.', ru: 'Легкий и популярный кольцевой маршрут, позволяющий увидеть самые известные гигантские секвойи в роще Марипоса, включая Гризли Джайант (возрастом около 3000 лет) и Калифорнийское туннельное дерево.' }
                     },
                     {
                         name: { en: 'Guardians Loop', ru: 'Петля Гвардианс' },
-                        dist: { en: '10.3 km', ru: '10.3 км' },
-                        time: { en: '4h 00m', ru: '4ч 00м' },
+                        dist: { en: '10.5 km', ru: '10.5 км' },
+                        time: { en: '5h 00m', ru: '5ч 00м' },
                         diff: 'Moderate',
                         color: 'bg-amber-600',
                         link: 'TBD',
+                        alltrails: 'TBD',
                         image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: { en: 'A moderate hike that climbs to the upper portion of Mariposa Grove, passing the historic Guardians cabin and many giant trees. Offers a quieter forest experience. [Komoot Link TBD]', ru: 'Средний по сложности поход, который поднимается в верхнюю часть рощи Марипоса, проходя мимо исторической хижины Смотрителей и множества гигантских деревьев. Более уединенный маршрут. [Ссылка на Komoot TBD]' }
+                        summary: { en: 'A moderate hike that climbs to the upper portion of Mariposa Grove, passing the historic Guardians cabin and many giant trees. Offers a quieter forest experience.', ru: 'Средний по сложности поход, который поднимается в верхнюю часть рощи Марипоса, проходя мимо исторической хижины Смотрителей и множества гигантских деревьев. Более уединенный маршрут.' }
                     }
                 ]
             },
@@ -227,32 +244,46 @@ export const tripData = [
                     {
                         name: { en: 'General Sherman Tree Loop', ru: 'Петля дерева Генерала Шермана' },
                         dist: { en: '9.8 km', ru: '9.8 км' },
-                        time: { en: '3h 00m', ru: '3ч 00м' },
+                        time: { en: '2h 53m', ru: '2ч 53м' },
                         diff: 'Moderate',
                         color: 'bg-green-600',
-                        link: 'https://www.komoot.com/smarttour/e809103831',
+                        link: 'https://www.komoot.com/smarttour/e2813460015/sherman-tree-congress-trail-of-the-sequoias-and-tharp-s-log-loop',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/general-sherman-trail',
                         image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'A scenic, moderate walk through the heart of the Giant Forest to visit General Sherman, the largest tree on Earth by volume, walking among ancient redwoods.', ru: 'Живописная несложная прогулка по центру Гигантского леса к Генералу Шерману — самому большому дереву на Земле по объему древесины.' }
                     },
                     {
                         name: { en: 'Congress Trail Loop', ru: 'Петля Конгресс-Трейл' },
                         dist: { en: '6.3 km', ru: '6.3 км' },
-                        time: { en: '2h 00m', ru: '2ч 00м' },
+                        time: { en: '1h 30m', ru: '1ч 30м' },
                         diff: 'Moderate',
                         color: 'bg-amber-600',
                         link: 'https://www.komoot.com/smarttour/e1324884824',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/the-congress-trail',
                         image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'A paved loop starting from the General Sherman Tree that leads deep into the Giant Forest, passing the impressive President, Senate, and House tree groups.', ru: 'Асфальтированная петля, начинающаяся от дерева Генерала Шермана и ведущая вглубь Гигантского леса мимо величественных групп деревьев Президент, Сенат и Палата представителей.' }
                     },
                     {
                         name: { en: 'Moro Rock Trail', ru: 'Тропа на скалу Моро' },
                         dist: { en: '6.8 km', ru: '6.8 км' },
-                        time: { en: '2h 15m', ru: '2ч 15м' },
+                        time: { en: '1h 56m', ru: '1ч 56м' },
                         diff: 'Moderate',
                         color: 'bg-indigo-600',
                         link: 'https://www.komoot.com/smarttour/e2813461461',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/moro-rock-trail',
                         image: 'https://images.unsplash.com/photo-1472214222541-d510753a4907?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'Hike from the Giant Forest Museum through pine forests to the base of Moro Rock, then climb the concrete stairway carved into the granite dome for panoramic views.', ru: 'Маршрут от Музея Гигантского леса через сосновые рощи к подножию скалы Моро с последующим подъемом по вырубленной в гранитном куполе лестнице ради панорамных видов.' }
+                    },
+                    {
+                        name: { en: 'Tokopah Falls Trail', ru: 'Тропа к водопаду Токопа' },
+                        dist: { en: '6.6 km', ru: '6.6 км' },
+                        time: { en: '1h 55m', ru: '1ч 55м' },
+                        diff: 'Moderate',
+                        color: 'bg-blue-600',
+                        link: 'https://www.komoot.com/smarttour/e809126539/tokopah-falls-trail',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/tokopah-falls-trail',
+                        image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: { en: 'Follow the Marble Fork of the Kaweah River through a deeply carved pine canyon to the base of the spectacular 365m cascading Tokopah Falls. Watch for marmots along the way.', ru: 'Маршрут вдоль реки Kaweah через сосновый каньон к подножию живописного 365-метрового каскадного водопада Токопа. По пути можно встретить сурков.' }
                     }
                 ]
             },

@@ -88,6 +88,32 @@ export function renderDayView(data, lang = 'en') {
         } else if (step.type === 'options') {
             const hikeCards = step.hikes.map(h => {
                 const diffLabel = (localizedDiff[lang] && localizedDiff[lang][h.diff]) ? localizedDiff[lang][h.diff] : h.diff;
+                
+                const hasKomoot = h.link && h.link !== 'TBD';
+                const hasAllTrails = h.alltrails && h.alltrails !== 'TBD';
+                let buttonsHtml = '';
+                
+                if (hasKomoot && hasAllTrails) {
+                    buttonsHtml = `
+                        <div class="mt-auto grid grid-cols-2 gap-2 w-full">
+                            <a href="${h.link}" target="_blank" class="block text-center py-2.5 bg-stone-900 text-white text-[11px] font-bold rounded-lg hover:bg-stone-800 transition">${lang === 'ru' ? 'Komoot' : 'Komoot'}</a>
+                            <a href="${h.alltrails}" target="_blank" class="block text-center py-2.5 bg-stone-100 text-stone-700 text-[11px] font-bold rounded-lg hover:bg-stone-200 transition border border-stone-200">${lang === 'ru' ? 'AllTrails' : 'AllTrails'}</a>
+                        </div>
+                    `;
+                } else if (hasKomoot) {
+                    buttonsHtml = `
+                        <a href="${h.link}" target="_blank" class="mt-auto block w-full text-center py-2.5 bg-stone-900 text-white text-[11px] font-bold rounded-lg hover:bg-stone-800 transition">${lang === 'ru' ? 'Открыть в Komoot' : 'Go to Komoot'}</a>
+                    `;
+                } else if (hasAllTrails) {
+                    buttonsHtml = `
+                        <a href="${h.alltrails}" target="_blank" class="mt-auto block w-full text-center py-2.5 bg-stone-100 text-stone-700 text-[11px] font-bold rounded-lg hover:bg-stone-200 transition border border-stone-200">${lang === 'ru' ? 'Открыть в AllTrails' : 'Go to AllTrails'}</a>
+                    `;
+                } else {
+                    buttonsHtml = `
+                        <div class="mt-auto block w-full text-center py-2.5 bg-stone-100 text-stone-400 text-[11px] font-bold rounded-lg border border-stone-200 border-dashed select-none">${lang === 'ru' ? 'Маршрут TBD' : 'Route TBD'}</div>
+                    `;
+                }
+
                 return `
                     <div class="hike-tile bg-white border border-stone-100 rounded-2xl overflow-hidden shadow-sm flex flex-col">
                         <div class="hike-hero" style="background-image: url('${h.image}')"></div>
@@ -98,7 +124,7 @@ export function renderDayView(data, lang = 'en') {
                             </div>
                             <div class="text-[10px] text-stone-400 font-bold mb-3">📏 ${t(h.dist, lang)} • ⏱️ ${t(h.time, lang)}</div>
                             <p class="text-xs text-stone-600 mb-5 leading-relaxed flex-1">${t(h.summary, lang)}</p>
-                            <a href="${h.link}" target="_blank" class="mt-auto block w-full text-center py-2.5 bg-stone-900 text-white text-[11px] font-bold rounded-lg hover:bg-stone-800 transition">${lang === 'ru' ? 'Открыть в Komoot' : 'Go to Komoot'}</a>
+                            ${buttonsHtml}
                         </div>
                     </div>
                 `;
