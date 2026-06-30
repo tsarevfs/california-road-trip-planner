@@ -22,7 +22,6 @@
                 <div class="flex items-center gap-6">
                     <div class="hidden md:flex space-x-8 text-sm font-medium text-stone-500">
                         <a href="#itinerary" class="hover:text-stone-900 transition" data-i18n="nav_itinerary">Interactive Itinerary</a>
-                        <a href="#wedding" class="hover:text-stone-900 transition text-amber-700 font-bold" data-i18n="nav_wedding">Wedding Schedule</a>
                         <a href="#logistics" class="hover:text-stone-900 transition" data-i18n="nav_logistics">Hike & Drive Data</a>
                     </div>
                     <!-- Language Switcher -->
@@ -74,33 +73,6 @@
             </div>
         </section>
 
-        <!-- Wedding Schedule Section -->
-        <section id="wedding" class="mb-20 scroll-mt-24">
-            <div class="bg-[#fdf9f4] rounded-[3rem] p-10 md:p-16 border border-amber-100">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-5xl font-bold text-stone-900 mb-4" data-i18n="wedding_title">Olga & Pavel's Wedding</h2>
-                    <p class="text-stone-600 max-w-2xl mx-auto text-lg" data-i18n="wedding_desc">Three days of celebration on the shores of Lake Tahoe. This official schedule ensures you're in the right place for every toast and sunset cruise.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
-                        <div class="text-stone-400 text-[11px] font-bold uppercase mb-4 tracking-widest" data-i18n="wedding_day1_date">Thu Aug 20</div>
-                        <h4 class="font-bold text-xl mb-2" data-i18n="wedding_day1_title">Paradise Cruise</h4>
-                        <p class="text-sm text-stone-600 leading-relaxed" data-i18n="wedding_day1_desc">5:30 PM. Lake Tahoe Paradise Boat. Drinks & appetizers on the water to kick off the festivities.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl border-2 border-amber-200 shadow-xl transform md:scale-105 z-10">
-                        <div class="text-amber-600 text-[11px] font-bold uppercase mb-4 tracking-widest" data-i18n="wedding_day2_date">Fri Aug 21</div>
-                        <h4 class="font-bold text-xl mb-2" data-i18n="wedding_day2_title">The Main Event</h4>
-                        <p class="text-sm text-stone-600 leading-relaxed" data-i18n="wedding_day2_desc">3:30 PM. The Landing Tahoe. Ceremony followed by cocktails and a celebratory dinner by the lake.</p>
-                    </div>
-                    <div class="bg-white p-8 rounded-2xl border border-stone-100 shadow-sm">
-                        <div class="text-stone-400 text-[11px] font-bold uppercase mb-4 tracking-widest" data-i18n="wedding_day3_date">Sat Aug 22</div>
-                        <h4 class="font-bold text-xl mb-2" data-i18n="wedding_day3_title">Farewell Brunch</h4>
-                        <p class="text-sm text-stone-600 leading-relaxed" data-i18n="wedding_day3_desc">11:00 AM. Toulouse Restaurant. A final gathering for the group before we head south toward Yosemite.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Logistics Section -->
         <section id="logistics" class="mb-20 scroll-mt-24">
             <div class="bg-white p-10 rounded-3xl border border-stone-100 shadow-sm mb-10">
@@ -114,7 +86,33 @@
                 </div>
                 <div class="bg-white rounded-3xl p-10 border border-stone-200 shadow-sm h-full">
                     <h3 class="text-2xl font-bold mb-2" data-i18n="driving_intensity_title">Driving Intensity</h3>
-                    <p class="text-xs text-stone-400 mb-8 uppercase font-bold tracking-widest" data-i18n="driving_intensity_subtitle">Total Daily Kilometers</p>
+                    <p class="text-xs text-stone-400 mb-6 uppercase font-bold tracking-widest" data-i18n="driving_intensity_subtitle">Total Daily Kilometers</p>
+                    
+                    <!-- Driving Analytics Dashboard Summary -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 pt-6 border-t border-stone-100">
+                        <div class="bg-[#fdfbf7] p-4 rounded-xl border border-stone-200/60 shadow-sm">
+                            <div class="flex items-center gap-2 mb-1.5">
+                                <span class="text-lg">📍</span>
+                                <span class="text-[10px] text-stone-400 font-bold uppercase tracking-wider" data-i18n="stats_total_dist">Total Distance</span>
+                            </div>
+                            <div class="text-lg sm:text-xl font-bold text-stone-900" id="stats-distance">--</div>
+                        </div>
+                        <div class="bg-[#fdfbf7] p-4 rounded-xl border border-stone-200/60 shadow-sm">
+                            <div class="flex items-center gap-2 mb-1.5">
+                                <span class="text-lg">⏱️</span>
+                                <span class="text-[10px] text-stone-400 font-bold uppercase tracking-wider" data-i18n="stats_total_time">Total Time</span>
+                            </div>
+                            <div class="text-lg sm:text-xl font-bold text-stone-900" id="stats-time">--</div>
+                        </div>
+                        <div class="bg-[#fdfbf7] p-4 rounded-xl border border-stone-200/60 shadow-sm">
+                            <div class="flex items-center gap-2 mb-1.5">
+                                <span class="text-lg">⛽</span>
+                                <span class="text-[10px] text-stone-400 font-bold uppercase tracking-wider" data-i18n="stats_fuel_estimate">Estimated Fuel</span>
+                            </div>
+                            <div class="text-lg sm:text-xl font-bold text-stone-900" id="stats-fuel">--</div>
+                        </div>
+                    </div>
+
                     <div class="chart-container">
                         <canvas id="drivingChart"></canvas>
                     </div>

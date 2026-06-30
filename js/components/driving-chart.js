@@ -63,5 +63,68 @@ export function initDrivingChart(tripData, lang) {
         }
     });
 
+    updateDrivingStats(tripData, lang);
+
     return chartInstance;
+}
+
+/**
+ * Calculates and updates driving summary statistics (distance, time, SUV fuel consumption).
+ * @param {Array} tripData 
+ * @param {string} lang 
+ */
+function updateDrivingStats(tripData, lang) {
+    let totalKm = 0;
+    let totalMinutes = 0;
+
+    tripData.forEach(d => {
+        d.sequence.forEach(s => {
+            if (s.type === 'drive') {
+                if (s.dist) totalKm += s.dist;
+                if (s.time && s.time.en) {
+                    const timeStr = s.time.en;
+                    const hMatch = timeStr.match(/(\d+)\s*h/);
+                    const mMatch = timeStr.match(/(\d+)\s*m/);
+                    const hours = hMatch ? parseInt(hMatch[1], 10) : 0;
+                    const minutes = mMatch ? parseInt(mMatch[1], 10) : 0;
+                    totalMinutes += (hours * 60) + minutes;
+                }
+            }
+        });
+    });
+
+    const totalMiles = Math.round(totalKm * 0.621371);
+    const totalGallons = Math.round(totalMiles / 25);
+    const totalLiters = Math.round((totalKm * 9.4) / 100);
+    const totalCost = Math.round(totalGallons * 4.75);
+
+    const distEl = document.getElementById('stats-distance');
+    const timeEl = document.getElementById('stats-time');
+    const fuelEl = document.getElementById('stats-fuel');
+
+    if (distEl) {
+        if (lang === 'ru') {
+            distEl.innerHTML = `${totalMiles.toLocaleString()} миль <span class="text-[11px] font-normal text-stone-500">(${totalKm.toLocaleString()} км)</span>`;
+        } else {
+            distEl.innerHTML = `${totalMiles.toLocaleString()} mi <span class="text-[11px] font-normal text-stone-500">(${totalKm.toLocaleString()} km)</span>`;
+        }
+    }
+
+    if (timeEl) {
+        const hours = Math.floor(totalMinutes / 60);
+        const mins = totalMinutes % 60;
+        if (lang === 'ru') {
+            timeEl.innerHTML = `${hours} ч ${mins} мин`;
+        } else {
+            timeEl.innerHTML = `${hours}h ${mins}m`;
+        }
+    }
+
+    if (fuelEl) {
+        if (lang === 'ru') {
+            fuelEl.innerHTML = `~${totalLiters} л <span class="text-xs font-normal text-stone-500">(~${totalGallons} гал.)</span><div class="text-[11px] text-stone-500 font-normal mt-1">около $${totalCost}</div>`;
+        } else {
+            fuelEl.innerHTML = `~${totalGallons} gal <span class="text-xs font-normal text-stone-500">(~${totalLiters} L)</span><div class="text-[11px] text-stone-500 font-normal mt-1">est. $${totalCost}</div>`;
+        }
+    }
 }
