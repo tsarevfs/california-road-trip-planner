@@ -58,19 +58,29 @@ export const tripData = [
                 detail: { en: 'Continue south on US-395, passing the spectacular overlooks of Mono Lake before arriving at your Yosemite Gateway basecamp.', ru: 'Продолжайте движение на юг по шоссе US-395 мимо захватывающих смотровых площадок озера Моно до базового лагеря у ворот в Йосемити.' },
                 icon: '🚗'
             },
-            { type: 'stay', label: { en: 'Yosemite Gateway', ru: 'Ворота в Йосемити' }, detail: { en: 'Lee Vining or Yosemite Area.', ru: 'Ли-Вининг или район Йосемити.' }, icon: '🏨' }
+            { type: 'stay', label: { en: 'Lake View Lodge', ru: 'Лодж Lake View' }, detail: { en: 'Lee Vining, CA. Basecamp before entering Yosemite via Tioga Pass.', ru: 'Ли-Вининг, Калифорния. Базовый лагерь перед въездом в Йосемити через перевал Тайога.' }, icon: '🏨' }
         ]
     },
     {
         day: 5,
         date: { en: 'Sun, Aug 23', ru: 'Вс, 23 авг' },
-        title: { en: 'Yosemite Valley Hikes', ru: 'Походы по долине Йосемити' },
-        summary: { en: 'Conquer Yosemite Valley\'s iconic, strenuous trails like the Mist Trail or Upper Yosemite Fall, then head to your gateway lodging.', ru: 'Покорите знаменитые сложные тропы долины Йосемити, такие как Mist Trail или Upper Yosemite Fall, а затем отправляйтесь в жилье у ворот парка.' },
+        title: { en: 'Yosemite Valley & Tioga Pass Hikes', ru: 'Походы по долине Йосемити и перевалу Тайога' },
+        summary: { en: 'Drive over the scenic Tioga Pass, choose from alpine lake trails or valley waterfall hikes, and head south to Oakhurst.', ru: 'Поездка через живописный перевал Тайога, выбор между альпийскими озерами или водопадами долины, и переезд на юг в Оакхерст.' },
         sequence: [
             {
+                type: 'drive',
+                label: { en: 'Morning Commute: Lee Vining to Yosemite Valley (via Tioga Pass)', ru: 'Утренний переезд: Ли-Вининг — Долина Йосемити (через перевал Тайога)' },
+                from: 'Lee Vining, CA',
+                to: 'Yosemite Valley',
+                dist: 120,
+                time: { en: '2h 00m', ru: '2ч 00м' },
+                detail: { en: 'Drive up the scenic CA-120 (Tioga Pass Road) crossing the Sierra Nevada. Stop by Tuolumne Meadows and Tenaya Lake on the way. ⚠️ <b>Caution:</b> Mountain driving with high elevations up to 3,000m.', ru: 'Поездка по живописному шоссе CA-120 (Tioga Pass Road) через Сьерра-Неваду. По пути остановитесь в Туоломни-Медоуз и у озера Тенайя. ⚠️ <b>Внимание:</b> вождение в высокогорье на высоте до 3000 м.' },
+                icon: '🚗'
+            },
+            {
                 type: 'options',
-                label: { en: 'Yosemite: Valley Hikes', ru: 'Йосемити: Походы по долине' },
-                detail: { en: 'Conquer Yosemite Valley\'s iconic, strenuous trails.', ru: 'Покорите знаменитые сложные тропы долины Йосемити.' },
+                label: { en: 'Yosemite: Valley & Tioga Road Hikes', ru: 'Йосемити: Походы в долине и на Тайога Роуд' },
+                detail: { en: 'Choose an alpine trail along Tioga Road or descend into the Valley for iconic waterfall hikes.', ru: 'Выберите альпийскую тропу вдоль Тайога Роуд или спуститесь в долину к знаменитым водопадам.' },
                 hikes: [
                     {
                         name: { en: 'Mist Trail to Vernal Fall', ru: 'Тропа Mist Trail к водопаду Вернал' },
@@ -101,23 +111,7 @@ export const tripData = [
                         link: 'https://www.komoot.com/smarttour/e1193363314',
                         image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'A wonderful loop that takes you up the Mist Trail to Vernal Fall, then ascends to Clark Point for a panoramic overlook before winding back down the John Muir Trail.', ru: 'Прекрасный кольцевой маршрут: подъем по Mist Trail к водопаду Вернал, подъем к смотровой площадке Clark Point и спуск обратно по тропе Джона Мьюра.' }
-                    }
-                ]
-            },
-            { type: 'stay', label: { en: 'Yosemite Gateway', ru: 'Ворота в Йосемити' }, detail: { en: 'El Portal or Mariposa Area.', ru: 'Эль-Портал или район Марипоса.' }, icon: '🏨' }
-        ]
-    },
-    {
-        day: 6,
-        date: { en: 'Mon, Aug 24', ru: 'Пн, 24 авг' },
-        title: { en: 'Yosemite Alpine Lakes & Viewpoints', ru: 'Альпийские озера и смотровые Йосемити' },
-        summary: { en: 'Enjoy Yosemite\'s spectacular scenic trails including Tenaya Lake and Glacier Point, then drive south to the foothills of Sequoia.', ru: 'Насладитесь великолепными панорамными тропами Йосемити, включая озеро Тенайя и Глейшер-Пойнт, а затем отправляйтесь на юг к предгорьям Секвойи.' },
-        sequence: [
-            {
-                type: 'options',
-                label: { en: 'Yosemite: Arrival Trails', ru: 'Йосемити: Начальные тропы' },
-                detail: { en: 'Choose an easy hike for your second day in the park.', ru: 'Выберите легкий поход для второго дня в парке.' },
-                hikes: [
+                    },
                     {
                         name: { en: 'Cathedral Lakes Trail', ru: 'Тропа к озерам Катидрал' },
                         dist: { en: '15.8 km', ru: '15.8 км' },
@@ -127,27 +121,73 @@ export const tripData = [
                         link: 'https://www.komoot.com/smarttour/e2813460839/cathedral-lakes-trail?ref=wsd&t_s=referral&t_cid=route_share&t_ref_username=5512427181359',
                         image: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'A spectacular hike in Tuolumne Meadows climbing through pine forests to the stunning alpine shores of Lower and Upper Cathedral Lakes under the shadow of Cathedral Peak.', ru: 'Захватывающий поход в Туоломни-Медоуз с подъемом через сосновые леса к потрясающим альпийским берегам Верхнего и Нижнего озер Катидрал у подножия пика Катидрал.' }
-                    },
-                    {
-                        name: { en: 'Lower Yosemite Fall Trail', ru: 'Тропа к Нижнему водопаду Йосемити' },
-                        dist: { en: '4.6 km', ru: '4.6 км' },
-                        time: { en: '1h 10m', ru: '1ч 10м' },
-                        diff: 'Easy',
-                        color: 'bg-teal-500',
-                        link: 'https://www.komoot.com/smarttour/e2813485123/lower-yosemite-fall-trail?ref=wsd&t_s=referral&t_cid=route_share&t_ref_username=5512427181359',
-                        image: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=400&h=250&q=80',
-                        summary: { en: 'An easy, paved walk leading straight to the base of the spectacular lower section of North America\'s tallest waterfall. Enjoy the misty spray and towering pine forests framing the roaring cascade.', ru: 'Простая асфальтированная тропа, ведущая прямо к подножию живописного нижнего каскада самого высокого водопада в Северной Америке. Насладитесь брызгами и величественными соснами.' }
                     }
                 ]
             },
             {
                 type: 'drive',
-                label: { en: 'Segment 1: Yosemite Valley to Fresno', ru: 'Участок 1: Долина Йосемити — Фресно' },
+                label: { en: 'Evening Commute: Yosemite Valley to Oakhurst', ru: 'Вечерний переезд: Долина Йосемити — Оакхерст' },
                 from: 'Yosemite Valley',
+                to: 'Oakhurst, CA',
+                dist: 77,
+                time: { en: '1h 15m', ru: '1ч 15м' },
+                detail: { en: 'Drive south from Yosemite Valley along CA-41 (Wawona Road) to your overnight stay in Oakhurst.', ru: 'Поездка на юг из долины Йосемити по шоссе CA-41 (Wawona Road) к месту вашей ночевки в Оакхерсте.' },
+                icon: '🚗'
+            },
+            { type: 'stay', label: { en: 'Oakhurst', ru: 'Оакхерст' }, detail: { en: 'Gateway to Yosemite South Entrance.', ru: 'Ворота у южного въезда в Йосемити.' }, icon: '🏨' }
+        ]
+    },
+    {
+        day: 6,
+        date: { en: 'Mon, Aug 24', ru: 'Пн, 24 авг' },
+        title: { en: 'Mariposa Grove Giant Sequoias & Southward Transit', ru: 'Гигантские секвойи Марипоса и транзит на юг' },
+        summary: { en: 'Walk among the ancient giants of Mariposa Grove, then make the drive south through Fresno to Three Rivers at the foothills of Sequoia NP.', ru: 'Прогуляйтесь среди древних гигантов в роще Марипоса, затем отправляйтесь на юг через Фресно в Три-Риверс у предгорий парка Секвойя.' },
+        sequence: [
+            {
+                type: 'drive',
+                label: { en: 'Morning Commute: Oakhurst to Mariposa Grove', ru: 'Утренний переезд: Оакхерст — Роща Марипоса' },
+                from: 'Oakhurst, CA',
+                to: 'Mariposa Grove',
+                dist: 26,
+                time: { en: '25m', ru: '25м' },
+                detail: { en: 'Short drive north on CA-41 to the Yosemite South Entrance and the Mariposa Grove Welcome Plaza.', ru: 'Короткая поездка на север по шоссе CA-41 к южному въезду в Йосемити и приветственной площадке рощи Марипоса.' },
+                icon: '🚗'
+            },
+            {
+                type: 'options',
+                label: { en: 'Yosemite: Mariposa Grove Hikes', ru: 'Йосемити: Походы по роще Марипоса' },
+                detail: { en: 'Choose a loop trail to explore these ancient giants.', ru: 'Выберите кольцевой маршрут для знакомства с этими древними гигантами.' },
+                hikes: [
+                    {
+                        name: { en: 'Grizzly Giant Loop', ru: 'Петля Гризли Джайант' },
+                        dist: { en: '3.2 km', ru: '3.2 км' },
+                        time: { en: '1h 30m', ru: '1ч 30м' },
+                        diff: 'Easy',
+                        color: 'bg-emerald-600',
+                        link: 'TBD',
+                        image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: { en: 'An easy, popular loop to see the most famous giant sequoias in Mariposa Grove, including the Grizzly Giant (nearly 3,000 years old) and the California Tunnel Tree. [Komoot Link TBD]', ru: 'Легкий и популярный кольцевой маршрут, позволяющий увидеть самые известные гигантские секвойи в роще Марипоса, включая Гризли Джайант (возрастом около 3000 лет) и Калифорнийское туннельное дерево. [Ссылка на Komoot TBD]' }
+                    },
+                    {
+                        name: { en: 'Guardians Loop', ru: 'Петля Гвардианс' },
+                        dist: { en: '10.3 km', ru: '10.3 км' },
+                        time: { en: '4h 00m', ru: '4ч 00м' },
+                        diff: 'Moderate',
+                        color: 'bg-amber-600',
+                        link: 'TBD',
+                        image: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: { en: 'A moderate hike that climbs to the upper portion of Mariposa Grove, passing the historic Guardians cabin and many giant trees. Offers a quieter forest experience. [Komoot Link TBD]', ru: 'Средний по сложности поход, который поднимается в верхнюю часть рощи Марипоса, проходя мимо исторической хижины Смотрителей и множества гигантских деревьев. Более уединенный маршрут. [Ссылка на Komoot TBD]' }
+                    }
+                ]
+            },
+            {
+                type: 'drive',
+                label: { en: 'Segment 1: Mariposa Grove to Fresno', ru: 'Участок 1: Роща Марипоса — Фресно' },
+                from: 'Mariposa Grove',
                 to: 'Fresno, CA',
-                dist: 150,
-                time: { en: '2h 15m', ru: '2ч 15м' },
-                detail: { en: 'Descend from the Sierra Nevada mountains along the winding roads of CA-41 South, arriving in Fresno in the Central Valley. ⚠️ <b>Caution:</b> Use low gears during the steep descent to prevent brake overheating.', ru: 'Спуск с гор Сьерра-Невада по извилистым дорогам трассы CA-41 на юг с прибытием во Фресно в Центральной долине. ⚠️ <b>Внимание:</b> используйте пониженные передачи на крутом спуске, чтобы избежать перегрева тормозов.' },
+                dist: 90,
+                time: { en: '1h 15m', ru: '1ч 15м' },
+                detail: { en: 'Drive south from the Yosemite South Entrance along CA-41 down through the foothills into the flat Central Valley agricultural hub of Fresno.', ru: 'Поездка на юг от южного въезда в Йосемити по шоссе CA-41 через предгорья на равнину Центральной долины в сельскохозяйственный центр Фресно.' },
                 icon: '🚗'
             },
             {
@@ -155,8 +195,8 @@ export const tripData = [
                 label: { en: 'Segment 2: Fresno to Three Rivers', ru: 'Участок 2: Фресно — Три-Риверс' },
                 from: 'Fresno, CA',
                 to: 'Three Rivers, CA',
-                dist: 150,
-                time: { en: '2h 00m', ru: '2ч 00м' },
+                dist: 124,
+                time: { en: '1h 45m', ru: '1ч 45м' },
                 detail: { en: 'Drive across the agricultural Central Valley before climbing back up into the Sierra Nevada foothills to arrive in Three Rivers, the gateway to Sequoia National Park.', ru: 'Поездка через сельскохозяйственную Центральную долину перед новым подъемом в предгорья Сьерра-Невады в городок Три-Риверс — ворота в национальный парк Секвойя.' },
                 icon: '🚗'
             },
@@ -169,6 +209,16 @@ export const tripData = [
         title: { en: 'Giant Sequoia National Park', ru: 'Национальный парк Гигантских Секвой' },
         summary: { en: 'Walk among the ancient giant sequoias including General Sherman, scale Moro Rock, and spend the night in Three Rivers.', ru: 'Прогуляйтесь среди древних гигантских секвой, включая дерево Генерала Шермана, поднимитесь на скалу Моро и проведите ночь в Три-Риверс.' },
         sequence: [
+            {
+                type: 'drive',
+                label: { en: 'Morning Commute: Three Rivers to Giant Forest', ru: 'Утренний переезд: Три-Риверс — Гигантский лес' },
+                from: 'Three Rivers, CA',
+                to: 'Giant Forest Museum',
+                dist: 50,
+                time: { en: '1h 00m', ru: '1ч 00м' },
+                detail: { en: 'Climb the steep, winding Generals Highway (CA-198) from the foothills to the high Sierra redwood forest. ⚠️ <b>Caution:</b> Sharp curves and narrow sections; vehicles over 22 feet not advised.', ru: 'Подъем по крутому и извилистому шоссе Дженералд-Хайвей (CA-198) от предгорий к высокогорному лесу секвой в Сьерре. ⚠️ <b>Внимание:</b> крутые повороты и узкие участки; не рекомендуется для длинного транспорта.' },
+                icon: '🚗'
+            },
             {
                 type: 'options',
                 label: { en: 'Sequoia National Park', ru: 'Национальный парк Секвойя' },
@@ -205,6 +255,16 @@ export const tripData = [
                         summary: { en: 'Hike from the Giant Forest Museum through pine forests to the base of Moro Rock, then climb the concrete stairway carved into the granite dome for panoramic views.', ru: 'Маршрут от Музея Гигантского леса через сосновые рощи к подножию скалы Моро с последующим подъемом по вырубленной в гранитном куполе лестнице ради панорамных видов.' }
                     }
                 ]
+            },
+            {
+                type: 'drive',
+                label: { en: 'Evening Return: Giant Forest to Three Rivers', ru: 'Вечернее возвращение: Гигантский лес — Три-Риверс' },
+                from: 'Giant Forest Museum',
+                to: 'Three Rivers, CA',
+                dist: 50,
+                time: { en: '1h 00m', ru: '1ч 00м' },
+                detail: { en: 'Descend the Generals Highway back to your basecamp in Three Rivers. Use low gears to save brakes.', ru: 'Спуск по шоссе Дженералд-Хайвей обратно в базовый лагерь в Три-Риверс. Используйте пониженную передачу для сбережения тормозов.' },
+                icon: '🚗'
             },
             { type: 'stay', label: { en: 'Three Rivers', ru: 'Три-Риверс' }, detail: { en: 'Sequoia Park foothills.', ru: 'Предгорья парка Секвойя.' }, icon: '🏨' }
         ]
