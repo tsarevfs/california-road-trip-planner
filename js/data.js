@@ -145,7 +145,7 @@ export const tripData = [
                         color: 'bg-emerald-600',
                         link: 'https://www.komoot.com/smarttour/e1197879106/sentinel-dome-sentinel-creek-und-taft-point-von-glacier-point-trailhead-yosemite-national-park',
                         alltrails: 'https://www.alltrails.com/trail/us/california/sentinel-dome-and-taft-point-loop?sh=true',
-                        image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=400&h=250&q=80',
+                        image: 'https://d2exd72xrrp1s7.cloudfront.net/www/000/1k1/1g/1g2ojl0i96jxpbbu1gh8t9km28w6yvhu-uhi1269972/0?width=1600&crop=true&height=1600&q=70',
                         summary: { en: 'A spectacular loop starting from Glacier Point Road combining two of Yosemite\'s most famous viewpoints: the 360-degree high Sierra panorama from Sentinel Dome and the sheer granite cliffs of Taft Point looking straight at El Capitan.', ru: 'Захватывающая петля от Glacier Point Road, объединяющая две культовые смотровые площадки: 360-градусную панораму с купола Сентинэл и головокружительные отвесные скалы Тафт Пойнт с видом на El Capitan.' }
                     }
                 ]
