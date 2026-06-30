@@ -147,6 +147,17 @@ export const tripData = [
                         alltrails: 'https://www.alltrails.com/trail/us/california/sentinel-dome-and-taft-point-loop?sh=true',
                         image: 'https://d2exd72xrrp1s7.cloudfront.net/www/000/1k1/1g/1g2ojl0i96jxpbbu1gh8t9km28w6yvhu-uhi1269972/0?width=1600&crop=true&height=1600&q=70',
                         summary: { en: 'A spectacular loop starting from Glacier Point Road combining two of Yosemite\'s most famous viewpoints: the 360-degree high Sierra panorama from Sentinel Dome and the sheer granite cliffs of Taft Point looking straight at El Capitan.', ru: 'Захватывающая петля от Glacier Point Road, объединяющая две культовые смотровые площадки: 360-градусную панораму с купола Сентинэл и головокружительные отвесные скалы Тафт Пойнт с видом на El Capitan.' }
+                    },
+                    {
+                        name: { en: 'Mirror Lake via Valley Loop Trail', ru: 'Зеркальное озеро через Valley Loop' },
+                        dist: { en: '8.7 km', ru: '8.7 км' },
+                        time: { en: '2h 00m', ru: '2ч 00м' },
+                        diff: 'Easy',
+                        color: 'bg-teal-600',
+                        link: 'https://www.komoot.com/smarttour/e1195916484/lower-and-upper-mirror-lakes-loop-from-valley-shuttle-stop-15-yosemite-national-park',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/mirror-lake-via-valley-loop-trail',
+                        image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: { en: 'An easy, scenic hike following the Valley Loop Trail to the shores of Mirror Lake, offering spectacular views up to Half Dome and Mount Watkins.', ru: 'Простой живописный поход по тропе Valley Loop к берегам Зеркального озера с впечатляющими видами на Half Dome и гору Уоткинс.' }
                     }
                 ]
             },
