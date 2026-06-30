@@ -17,7 +17,7 @@ export const tripData = [
         summary: { en: 'Enjoy a relaxed morning at the lake before joining the group for a sunset cruise on Lake Tahoe to kick off the wedding celebrations.', ru: 'Проведите расслабленное утро у озера, а затем присоединяйтесь к группе в круизе на закате по озеру Тахо в честь начала свадебных торжеств.' },
         sequence: [
             { type: 'activity', label: { en: 'Leisure Morning', ru: 'Свободное утро' }, detail: { en: 'Explore the lake shoreline or relax.', ru: 'Прогуляйтесь по берегу озера или отдохните.' }, icon: '☕' },
-            { type: 'activity', label: { en: 'Paradise Cruise', ru: 'Круиз «Парадайс»' }, detail: { en: '5:30 PM. Official wedding kickoff on the water.', ru: '17:30. Официальный старт свадьбы на воде.' }, icon: '⛵' },
+            { type: 'activity', label: { en: 'Paradise Cruise', ru: 'Круиз «Парадайс»' }, detail: { en: '5:30 PM. Lake Tahoe Paradise Boat. Drinks & appetizers on the water to kick off the festivities.', ru: '17:30. Яхта Lake Tahoe Paradise. Напитки и закуски на воде в честь начала праздника.' }, icon: '⛵' },
             { type: 'stay', label: { en: 'The Landing Resort', ru: 'Курортный отель The Landing' }, detail: { en: 'Wedding basecamp in Tahoe.', ru: 'Свадебный лагерь в Тахо.' }, icon: '🏨' }
         ]
     },
@@ -27,7 +27,7 @@ export const tripData = [
         title: { en: 'The Wedding Day', ru: 'День свадьбы' },
         summary: { en: 'The big day: celebrate Olga & Pavel\'s wedding ceremony, cocktails, and lakeside dinner at The Landing Resort.', ru: 'Главный день: празднование свадьбы Ольги и Павла, церемония, коктейли и праздничный ужин у озера в отеле The Landing Resort.' },
         sequence: [
-            { type: 'activity', label: { en: 'Wedding Ceremony', ru: 'Свадебная церемония' }, detail: { en: '3:30 PM at The Landing Tahoe. Cocktail and Dinner follows.', ru: '15:30 в The Landing Tahoe. Затем последуют коктейли и ужин.' }, icon: '💍' },
+            { type: 'activity', label: { en: 'Wedding Ceremony', ru: 'Свадебная церемония' }, detail: { en: '3:30 PM at The Landing Tahoe. Ceremony followed by cocktails and a celebratory dinner by the lake.', ru: '15:30 в The Landing Tahoe. Церемония, после которой последуют коктейли и праздничный ужин у озера.' }, icon: '💍' },
             { type: 'stay', label: { en: 'The Landing Resort', ru: 'Курортный отель The Landing' }, detail: { en: 'South Lake Tahoe.', ru: 'Саут-Лейк-Тахо.' }, icon: '🏨' }
         ]
     },
@@ -37,7 +37,7 @@ export const tripData = [
         title: { en: 'Leaving Lake Tahoe to Yosemite', ru: 'Переезд из озера Тахо в Йосемити' },
         summary: { en: 'Join the farewell brunch in South Lake Tahoe to share final group moments before preparing for the mountain crossing.', ru: 'Присоединяйтесь к прощальному бранчу в Саут-Лейк-Тахо, чтобы провести последние минуты с группой перед подготовкой к переезду через горы.' },
         sequence: [
-            { type: 'activity', label: { en: 'Brunch at Toulouse', ru: 'Бранч в Toulouse' }, detail: { en: '11:00 AM. Final group celebration.', ru: '11:00. Финальная встреча группы.' }, icon: '🥞' },
+            { type: 'activity', label: { en: 'Brunch at Toulouse', ru: 'Бранч в Toulouse' }, detail: { en: '11:00 AM. Toulouse Restaurant. A final gathering for the group before we head south toward Yosemite.', ru: '11:00. Ресторан Toulouse. Финальная встреча группы перед отправлением на юг в сторону Йосемити.' }, icon: '🥞' },
             {
                 type: 'drive',
                 label: { en: 'Segment 1: South Lake Tahoe to Bridgeport', ru: 'Участок 1: Саут-Лейк-Тахо — Бриджпорт' },
@@ -136,6 +136,17 @@ export const tripData = [
                         alltrails: 'https://www.alltrails.com/trail/us/california/lower-yosemite-falls-trail',
                         image: 'https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=400&h=250&q=80',
                         summary: { en: 'An easy, paved walk leading straight to the base of the spectacular lower section of North America\'s tallest waterfall. Enjoy the misty spray and towering pine forests framing the roaring cascade.', ru: 'Простая асфальтированная тропа, ведущая прямо к подножию живописного нижнего каскада самого высокого водопада в Северной Америке. Насладитесь брызгами и величественными соснами.' }
+                    },
+                    {
+                        name: { en: 'Sentinel Dome & Taft Point Loop', ru: 'Петля Сентинэл Доум и Тафт Пойнт' },
+                        dist: { en: '9.0 km', ru: '9.0 км' },
+                        time: { en: '3h 00m', ru: '3ч 00м' },
+                        diff: 'Moderate',
+                        color: 'bg-emerald-600',
+                        link: 'https://www.komoot.com/smarttour/e1197879106/sentinel-dome-sentinel-creek-und-taft-point-von-glacier-point-trailhead-yosemite-national-park',
+                        alltrails: 'https://www.alltrails.com/trail/us/california/sentinel-dome-and-taft-point-loop?sh=true',
+                        image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?auto=format&fit=crop&w=400&h=250&q=80',
+                        summary: { en: 'A spectacular loop starting from Glacier Point Road combining two of Yosemite\'s most famous viewpoints: the 360-degree high Sierra panorama from Sentinel Dome and the sheer granite cliffs of Taft Point looking straight at El Capitan.', ru: 'Захватывающая петля от Glacier Point Road, объединяющая две культовые смотровые площадки: 360-градусную панораму с купола Сентинэл и головокружительные отвесные скалы Тафт Пойнт с видом на El Capitan.' }
                     }
                 ]
             },
