@@ -1,10 +1,13 @@
+import { t } from '../i18n.js';
+
 let chartInstance = null;
 
 /**
  * Initializes the driving intensity chart using Chart.js.
- * @param {Array} tripData - The trip details array.
+ * @param {Array} tripData - The trip details array (single-source with {en, ru} fields).
+ * @param {string} lang - The active language code ('en' or 'ru').
  */
-export function initDrivingChart(tripData) {
+export function initDrivingChart(tripData, lang) {
     const canvas = document.getElementById('drivingChart');
     if (!canvas) return;
 
@@ -17,8 +20,9 @@ export function initDrivingChart(tripData) {
     
     // Extract date labels. In EN: "Wed, Aug 19" -> "Aug 19". In RU: "Ср, 19 авг" -> "19 авг".
     const labels = tripData.map(d => {
-        const parts = d.date.split(',');
-        return parts.length > 1 ? parts[1].trim() : d.date;
+        const dateStr = t(d.date, lang);
+        const parts = dateStr.split(',');
+        return parts.length > 1 ? parts[1].trim() : dateStr;
     });
 
     // Ensure Chart.js library is loaded

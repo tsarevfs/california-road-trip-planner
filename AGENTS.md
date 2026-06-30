@@ -42,8 +42,9 @@ us_trip/
 ├── css/
 │   └── styles.css                  # Custom styling rules, variables, animations
 ├── js/
-│   ├── app.js                      # Main application orchestrator & i18n dictionary
+│   ├── app.js                      # Main application orchestrator
 │   ├── data.js                     # Centralized static trip data and planning checklist
+│   ├── i18n.js                     # Localization utilities & static UI dictionary
 │   └── components/
 │       ├── day-view.js             # Detailed daily sequence rendering module
 │       ├── driving-chart.js        # Driving intensity Chart.js visualization
@@ -56,8 +57,9 @@ us_trip/
 ### File Profiles:
 * **[index.html](file:///Users/ftsarev/Documents/us_trip/index.html):** Declares layout structure, references scripts as ES modules (`type="module"`), imports CDNs, and defines localized elements using `data-i18n` attributes.
 * **[css/styles.css](file:///Users/ftsarev/Documents/us_trip/css/styles.css):** Sets base styles, custom colors (dark forest green `#556b2f`, off-white backgrounds `#fdfbf7`), transitions, and card hovers.
-* **[js/app.js](file:///Users/ftsarev/Documents/us_trip/js/app.js):** Coordinates language state, routing logic, and triggers component updates on interaction. Contains static text translation dictionaries.
-* **[js/data.js](file:///Users/ftsarev/Documents/us_trip/js/data.js):** Houses the structured dataset `tripData` (supporting `en` and `ru` root arrays) and `todos` checklist state.
+* **[js/app.js](file:///Users/ftsarev/Documents/us_trip/js/app.js):** Coordinates language state, routing logic, and triggers component updates on interaction.
+* **[js/data.js](file:///Users/ftsarev/Documents/us_trip/js/data.js):** Houses the structured dataset `tripData` (single-source with inline `{en, ru}` translations) and `todos` checklist state.
+* **[js/i18n.js](file:///Users/ftsarev/Documents/us_trip/js/i18n.js):** Provides the `t()` translation resolver utility and the static UI translation dictionaries (`dictionary`).
 * **[js/components/timeline.js](file:///Users/ftsarev/Documents/us_trip/js/components/timeline.js):** Renders the horizontal (mobile) / vertical (desktop) timeline items. Handles selection callback and scrolling behaviors.
 * **[js/components/day-view.js](file:///Users/ftsarev/Documents/us_trip/js/components/day-view.js):** Transforms structured data steps (`drive`, `options`, `activity`, `stay`, `travel`) into dynamic, styled HTML templates.
 * **[js/components/todo-list.js](file:///Users/ftsarev/Documents/us_trip/js/components/todo-list.js):** Renders planning tasks, listens to user completion clicks, and supports reactive state toggles.
@@ -83,7 +85,7 @@ The application avoids full-page reloads and state loss by using URL hashes as r
   ```javascript
   window.location.hash = `day-${dayId}`;
   ```
-- A `hashchange` listener captures this change, reads the active ID, searches for the corresponding object in `tripData[currentLang]`, and calls `renderDayView` to perform a smooth fade-in draw of that day's itinerary list.
+- A `hashchange` listener captures this change, reads the active ID, searches for the corresponding object in `tripData`, and calls `renderDayView` to perform a smooth fade-in draw of that day's itinerary list.
 - If the hash is invalid or missing, it defaults to Day 1.
 
 ```mermaid
@@ -105,7 +107,7 @@ sequenceDiagram
 ### C. Language Switcher (i18n) Flow
 Localization updates are computed dynamically on the client:
 1. **Dynamic Search:** The script scans the DOM for all elements carrying the `data-i18n` attribute.
-2. **Substitution:** It matches the attribute value with the keys under `dictionary[lang]` and replaces the `innerHTML` of each element.
+2. **Substitution:** It matches the attribute value with the keys under `dictionary[lang]` (imported from `js/i18n.js`) and replaces the `innerHTML` of each element.
 3. **Component Re-renders:** It instructs components to refresh, causing:
    - The timeline labels (dates and titles) to shift language.
    - The active day view card templates and text strings to translate.
@@ -129,8 +131,8 @@ Localization updates are computed dynamically on the client:
 When writing code or adding features to this workspace, please adhere to the following rules:
 
 ### 1. Maintain Dual-Language Localization (EN & RU)
-- **Static Text:** When adding static headings or descriptions in [index.html](file:///Users/ftsarev/Documents/us_trip/index.html), always assign a descriptive `data-i18n` key and add translation entries under both `en` and `ru` in [js/app.js](file:///Users/ftsarev/Documents/us_trip/js/app.js).
-- **Dynamic Content:** Keep [js/data.js](file:///Users/ftsarev/Documents/us_trip/js/data.js) synchronized. Ensure that if you add days, events, hikes, or checklists, you represent their strings in both translation branches.
+- **Static Text:** When adding static headings or descriptions in [index.html](file:///Users/ftsarev/Documents/us_trip/index.html), always assign a descriptive `data-i18n` key and add translation entries under both `en` and `ru` in [js/i18n.js](file:///Users/ftsarev/Documents/us_trip/js/i18n.js).
+- **Dynamic Content:** Keep [js/data.js](file:///Users/ftsarev/Documents/us_trip/js/data.js) synchronized. Ensure that if you add days, events, hikes, or checklists, you represent their strings as inline `{en, ru}` translation objects.
 
 ### 2. Preserve Semantic HTML Structure
 - Use HTML5 semantic elements correctly (e.g. `<main>` for layout contents, `<nav>` for menus, `<section>` for logical modules, `<header>` and `<footer>`).
