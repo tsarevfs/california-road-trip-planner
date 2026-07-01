@@ -74,7 +74,7 @@ export const tripData = [
                 to: 'Yosemite Valley',
                 dist: 120,
                 time: { en: '2h 00m', ru: '2ч 00м' },
-                detail: { en: 'Drive up the scenic CA-120 (Tioga Pass Road) crossing the Sierra Nevada. Stop by Tuolumne Meadows and Tenaya Lake on the way. ⚠️ <b>Caution:</b> Mountain driving with high elevations up to 3,000m.', ru: 'Поездка по живописному шоссе CA-120 (Tioga Pass Road) через Сьерра-Неваду. По пути остановитесь в Туоломни-Медоуз и у озера Тенайя. ⚠️ <b>Внимание:</b> вождение в высокогорье на высоте до 3000 м.' },
+                detail: { en: 'Drive up the scenic CA-120 (Tioga Pass Road) crossing the Sierra Nevada. Stop by Tuolumne Meadows and Tenaya Lake on the way. ⚠️ <b>Caution:</b> Mountain driving with high elevations up to 3,000m. <b>Early Start:</b> Depart Lee Vining by 5:30 AM to beat Sunday peak hours traffic and secure a parking spot in Yosemite Valley (lots fill up by 7:30 AM).', ru: 'Поездка по живописному шоссе CA-120 (Tioga Pass Road) через Сьерра-Неваду. По пути остановитесь в Туоломни-Медоуз и у озера Тенайя. ⚠️ <b>Внимание:</b> вождение в высокогорье на высоте до 3000 м. <b>Ранний выезд:</b> выезжайте из Ли-Вининга до 5:30 утра, чтобы избежать воскресных пробок в часы пик и занять парковочное место в долине Йосемити (парковки заполняются к 7:30 утра).' },
                 icon: '🚗'
             },
             {
@@ -187,7 +187,7 @@ export const tripData = [
                 to: 'Mariposa Grove',
                 dist: 26,
                 time: { en: '25m', ru: '25м' },
-                detail: { en: 'Short drive north on CA-41 to the Yosemite South Entrance and the Mariposa Grove Welcome Plaza.', ru: 'Короткая поездка на север по шоссе CA-41 к южному въезду в Йосемити и приветственной площадке рощи Марипоса.' },
+                detail: { en: 'Short drive north on CA-41 to the Yosemite South Entrance and the Mariposa Grove Welcome Plaza. ⚠️ <b>Early Start:</b> Depart Oakhurst by 7:30 AM – 8:00 AM to secure a spot at the Welcome Plaza parking lot and board the shuttle before lines grow long.', ru: 'Короткая поездка на север по шоссе CA-41 к южному въезду в Йосемити и приветственной площадке рощи Марипоса. ⚠️ <b>Ранний выезд:</b> выезжайте из Оакхерста до 7:30 – 8:00 утра, чтобы гарантированно найти место на парковке Welcome Plaza и сесть на шаттл до того, как образуются большие очереди.' },
                 icon: '🚗'
             },
             {
@@ -255,7 +255,7 @@ export const tripData = [
                 to: 'Giant Forest Museum',
                 dist: 50,
                 time: { en: '1h 00m', ru: '1ч 00м' },
-                detail: { en: 'Climb the steep, winding Generals Highway (CA-198) from the foothills to the high Sierra redwood forest. ⚠️ <b>Caution:</b> Sharp curves and narrow sections; vehicles over 22 feet not advised.', ru: 'Подъем по крутому и извилистому шоссе Дженералд-Хайвей (CA-198) от предгорий к высокогорному лесу секвой в Сьерре. ⚠️ <b>Внимание:</b> крутые повороты и узкие участки; не рекомендуется для длинного транспорта.' },
+                detail: { en: 'Climb the steep, winding Generals Highway (CA-198) from the foothills to the high Sierra redwood forest. ⚠️ <b>Caution:</b> Sharp curves and narrow sections; vehicles over 22 feet not advised. <b>Early Start:</b> Depart Three Rivers by 7:30 AM to secure parking at the Giant Forest Museum before it fills up by mid-morning.', ru: 'Подъем по крутому и извилистому шоссе Дженералд-Хайвей (CA-198) от предгорий к высокогорному лесу секвой в Сьерре. ⚠️ <b>Внимание:</b> крутые повороты и узкие участки; не рекомендуется для длинного транспорта. <b>Ранний выезд:</b> выезжайте из Три-Риверс до 7:30 утра, чтобы успеть занять парковку у Музея Гигантского леса до того, как она заполнится в середине утра.' },
                 icon: '🚗'
             },
             {
@@ -553,8 +553,8 @@ export const todos = [
     {
         id: 1,
         text: {
-            en: 'Yosemite Entry Reservation (Aug 23)',
-            ru: 'Резервация въезда в Йосемити (23 авг)'
+            en: 'Non-Resident Annual Pass ($250) & Yosemite 2nd Car Entry ($135) (Option 1)',
+            ru: 'Абонемент для нерезидентов ($250) и въезд 2-й машины в Йосемити ($135) (Вариант 1)'
         },
         done: false
     },
